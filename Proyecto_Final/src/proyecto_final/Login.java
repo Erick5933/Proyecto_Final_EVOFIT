@@ -120,6 +120,8 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 130, -1, 40));
 
         txtusername.setBackground(new java.awt.Color(44, 44, 59));
+        txtusername.setFont(new java.awt.Font("Open Sans ExtraBold", 0, 12)); // NOI18N
+        txtusername.setForeground(new java.awt.Color(255, 255, 255));
         txtusername.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtusername.setText(" Ingrese el Usuario");
         txtusername.setBorder(null);
@@ -138,6 +140,8 @@ public class Login extends javax.swing.JFrame {
         jPanel2.add(txtusername, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 270, 40));
 
         txtpassword.setBackground(new java.awt.Color(44, 44, 59));
+        txtpassword.setFont(new java.awt.Font("Open Sans ExtraBold", 0, 12)); // NOI18N
+        txtpassword.setForeground(new java.awt.Color(255, 255, 255));
         txtpassword.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtpassword.setText("********");
         txtpassword.setBorder(null);
@@ -155,6 +159,7 @@ public class Login extends javax.swing.JFrame {
         jLabel1.setText("Login");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 0, 340, -1));
 
+        jLabel2.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 12)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Bienvenidos, Esperemos que disfruten de nuestro Programa.");
