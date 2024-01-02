@@ -5,6 +5,8 @@
  */
 package proyecto_final;
 
+import proyecto_final.Clases.noticias;
+
 /**
  *
  * @author Erick
@@ -16,6 +18,8 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
      */
     public Admin_Interfaz_Inicio() {
         initComponents();
+        this.setLocationRelativeTo(this);
+        
     }
 
     /**
@@ -27,48 +31,68 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPasswordField1 = new javax.swing.JPasswordField();
+        titulo = new javax.swing.JLabel();
+        bot_usuario = new javax.swing.JButton();
+        bot_frases = new javax.swing.JButton();
+        bot_comida = new javax.swing.JButton();
+        bot_noticias = new javax.swing.JButton();
+        fondo = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 377, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jPasswordField1.setText("jPasswordField1");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        titulo.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
+        titulo.setText("ADMIN");
+        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 120, 40));
+
+        bot_usuario.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
+        bot_usuario.setText("usuario");
+        bot_usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(bot_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, 130, 40));
+
+        bot_frases.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
+        bot_frases.setText("frases");
+        bot_frases.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(bot_frases, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 130, 40));
+
+        bot_comida.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
+        bot_comida.setText("comida");
+        bot_comida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        getContentPane().add(bot_comida, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 130, 40));
+
+        bot_noticias.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
+        bot_noticias.setText("noticias");
+        bot_noticias.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bot_noticias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bot_noticiasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bot_noticias, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 130, 40));
+
+        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1003541_1.png"))); // NOI18N
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 970, 580));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bot_noticiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_noticiasActionPerformed
+        noticias noti = new noticias();
+        noti.setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_bot_noticiasActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Admin_Interfaz_Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Admin_Interfaz_Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Admin_Interfaz_Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Admin_Interfaz_Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -79,5 +103,12 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bot_comida;
+    private javax.swing.JButton bot_frases;
+    private javax.swing.JButton bot_noticias;
+    private javax.swing.JButton bot_usuario;
+    private javax.swing.JLabel fondo;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 }
