@@ -276,7 +276,7 @@ public class Login extends javax.swing.JFrame {
 
         if (usuarioInteractuado && usuario.equals("Ingrese el Usuario")) {
             txtusername.setText("");
-            txtusername.setForeground(Color.black);
+            txtusername.setForeground(Color.white);
         }
 
         usuarioInteractuado = true;
@@ -290,7 +290,7 @@ public class Login extends javax.swing.JFrame {
 //        }
         if (String.valueOf(txtpassword.getPassword()).isEmpty()) {
             txtpassword.setText("");
-            txtpassword.setForeground(Color.black);
+            txtpassword.setForeground(Color.white);
         }    }//GEN-LAST:event_txtusernameMousePressed
 
     private void txtpasswordMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtpasswordMousePressed
@@ -299,7 +299,7 @@ public class Login extends javax.swing.JFrame {
 
         if (contraseña.equals("********")) {
             txtpassword.setText("");
-            txtpassword.setForeground(Color.black);
+            txtpassword.setForeground(Color.white);
         }
 
         Validaciones validar = new Validaciones();
