@@ -5,6 +5,7 @@
  */
 package proyecto_final;
 
+import Proyecto_Final_Ocultar_letra.TextPrompt;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import proyecto_final.Clases.Clase_Registrarse;
@@ -23,8 +24,14 @@ public class Registro extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-//        this.setUndecorated(true);
+        //this.setUndecorated(true);
 
+        TextPrompt nombre = new TextPrompt("Ingrese nombre completo", Nombre);
+        TextPrompt apellido = new TextPrompt("Ingrese apellido completo", Apellido);
+        TextPrompt usuario = new TextPrompt("Ingrese su usuario", Usuario);
+        TextPrompt contraseña = new TextPrompt("Ingrese su contraseña", Contraseña);
+        TextPrompt peso = new TextPrompt("Ingrese su peso", Peso);
+        TextPrompt altura = new TextPrompt("Ingrese su altura", Altura);
     }
 
     /**
