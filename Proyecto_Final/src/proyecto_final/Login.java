@@ -7,7 +7,9 @@ package proyecto_final;
 
 import java.awt.Color;
 import java.awt.Cursor;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import proyecto_final.Clases.Clase_Registrarse;
 
 /**
  *
@@ -16,6 +18,8 @@ import javax.swing.JOptionPane;
 public class Login extends javax.swing.JFrame {
 
     private boolean usuarioInteractuado = false;
+
+    public static ArrayList<Clase_Registrarse> Lista = new ArrayList<>();
 
     /**
      * Creates new form Login
@@ -342,7 +346,6 @@ public class Login extends javax.swing.JFrame {
         Registro newFrame = new Registro();
         newFrame.setVisible(true);
         this.dispose();
-        newFrame.setLocationRelativeTo(null);
 
 
     }//GEN-LAST:event_jLabel10MouseClicked

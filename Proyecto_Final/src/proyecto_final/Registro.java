@@ -5,6 +5,11 @@
  */
 package proyecto_final;
 
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+import proyecto_final.Clases.Clase_Registrarse;
+import static proyecto_final.Login.Lista;
+
 /**
  *
  * @author Erick
@@ -27,21 +32,518 @@ public class Registro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        Nombre = new javax.swing.JTextField();
+        Apellido = new javax.swing.JTextField();
+        Usuario = new javax.swing.JTextField();
+        Peso = new javax.swing.JTextField();
+        Altura = new javax.swing.JTextField();
+        Femenino = new javax.swing.JRadioButton();
+        Masculino = new javax.swing.JRadioButton();
+        Contraseña = new javax.swing.JPasswordField();
+        Edad = new javax.swing.JSpinner();
+        jButton1 = new javax.swing.JButton();
+        Activo = new javax.swing.JRadioButton();
+        Medio = new javax.swing.JRadioButton();
+        Sedentario = new javax.swing.JRadioButton();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(129, 43, 209));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Berlin Sans FB Demi", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("REGISTRARSE");
+
+        jLabel3.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Nombre:");
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Apellido:");
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Usuario:");
+
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Contraseña:");
+
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Peso:");
+
+        jLabel8.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Altura");
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Edad:");
+
+        jLabel10.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Actividad:");
+
+        jLabel11.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Genero:");
+
+        Nombre.setBackground(new java.awt.Color(52, 211, 196));
+        Nombre.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        Nombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreActionPerformed(evt);
+            }
+        });
+        Nombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                NombreKeyTyped(evt);
+            }
+        });
+
+        Apellido.setBackground(new java.awt.Color(52, 211, 196));
+        Apellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ApellidoActionPerformed(evt);
+            }
+        });
+        Apellido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                ApellidoKeyTyped(evt);
+            }
+        });
+
+        Usuario.setBackground(new java.awt.Color(52, 211, 196));
+        Usuario.setVerifyInputWhenFocusTarget(false);
+        Usuario.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                UsuarioKeyTyped(evt);
+            }
+        });
+
+        Peso.setBackground(new java.awt.Color(52, 211, 196));
+        Peso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PesoActionPerformed(evt);
+            }
+        });
+        Peso.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                PesoKeyTyped(evt);
+            }
+        });
+
+        Altura.setBackground(new java.awt.Color(52, 211, 196));
+        Altura.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                AlturaKeyTyped(evt);
+            }
+        });
+
+        Femenino.setBackground(new java.awt.Color(52, 211, 196));
+        buttonGroup1.add(Femenino);
+        Femenino.setText("Femenino");
+        Femenino.setToolTipText("");
+
+        Masculino.setBackground(new java.awt.Color(52, 211, 196));
+        buttonGroup1.add(Masculino);
+        Masculino.setText("Masculino");
+
+        Contraseña.setBackground(new java.awt.Color(52, 211, 196));
+        Contraseña.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                ContraseñaKeyTyped(evt);
+            }
+        });
+
+        jButton1.setBackground(new java.awt.Color(129, 43, 209));
+        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jButton1.setText("Registrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        Activo.setBackground(new java.awt.Color(52, 211, 196));
+        buttonGroup2.add(Activo);
+        Activo.setText("Activo");
+
+        Medio.setBackground(new java.awt.Color(52, 211, 196));
+        buttonGroup2.add(Medio);
+        Medio.setText("Medio");
+        Medio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MedioActionPerformed(evt);
+            }
+        });
+
+        Sedentario.setBackground(new java.awt.Color(52, 211, 196));
+        buttonGroup2.add(Sedentario);
+        Sedentario.setText("Sedentario");
+        Sedentario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SedentarioActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(50, 50, 50)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(61, 61, 61)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel11)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel5)
+                                .addComponent(jLabel6)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(Femenino, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Masculino, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel3)
+                                    .addComponent(Apellido)
+                                    .addComponent(Usuario)
+                                    .addComponent(Nombre)))
+                            .addComponent(Contraseña))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Edad, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addComponent(Activo, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Medio, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(Sedentario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+                                    .addComponent(jLabel7)
+                                    .addComponent(Peso)
+                                    .addComponent(Altura))))
+                        .addGap(68, 68, 68))))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Peso)
+                    .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel8)
+                    .addComponent(jLabel4))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Altura, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel9))
+                .addGap(9, 9, 9)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Edad)
+                    .addComponent(Usuario, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Activo, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Medio, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Sedentario, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addComponent(jLabel11)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Masculino, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(Femenino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
+        );
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/Logo_conCirculo-removebg-preview (2).png"))); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("EVOFIT");
+
+        jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel13.setText("..........................................");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 449, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                        .addComponent(jLabel13)
+                        .addGap(25, 25, 25))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel12)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(50, 50, 50)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(105, 105, 105)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel13)
+                .addContainerGap(105, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ApellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ApellidoActionPerformed
+
+    private void PesoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PesoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PesoActionPerformed
+
+    private void NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreActionPerformed
+
+    private boolean campoVacioAntes = true;
+
+    private void NombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NombreKeyTyped
+
+        char c = evt.getKeyChar();
+        if (campoVacioAntes && !Character.isLetter(c) && Character.isWhitespace(c)) {
+            evt.consume();
+        } else if (Character.isWhitespace(c) && Character.isLetter(c) || Character.isDigit(c)) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Por favor, ingrese solo letras y espacios.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
+        }
+        campoVacioAntes = Nombre.getText().isEmpty();
+
+        JTextField textField = (JTextField) evt.getSource();
+        if (textField.getText().length() >= 50) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_NombreKeyTyped
+
+    private void ApellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ApellidoKeyTyped
+        // TODO add your handling code here:
+
+        char c = evt.getKeyChar();
+        if (campoVacioAntes && !Character.isLetter(c) && Character.isWhitespace(c)) {
+            evt.consume();
+        } else if (Character.isWhitespace(c) && Character.isLetter(c) || Character.isDigit(c)) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Por favor, ingrese solo letras y espacios.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
+        }
+        campoVacioAntes = Apellido.getText().isEmpty();
+
+        JTextField textField = (JTextField) evt.getSource();
+        if (textField.getText().length() >= 50) {
+            evt.consume();
+        }
+
+    }//GEN-LAST:event_ApellidoKeyTyped
+
+    private void UsuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_UsuarioKeyTyped
+        char c = evt.getKeyChar();
+        JTextField textField = (JTextField) evt.getSource();
+        if (campoVacioAntes && !Character.isLetterOrDigit(c) && Character.isWhitespace(c)) {
+            evt.consume();
+        } else if (!Character.isLetterOrDigit(c) && Character.isWhitespace(c) && c != '-' && c != '.') {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Ingrese letras,numeros,guion,punto", "Error de entrada", JOptionPane.ERROR_MESSAGE);
+        }
+        campoVacioAntes = textField.getText().isEmpty();
+        if (textField.getText().length() >= 10) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_UsuarioKeyTyped
+
+    private void ContraseñaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ContraseñaKeyTyped
+        char c = evt.getKeyChar();
+        JTextField textField = (JTextField) evt.getSource();
+        if (campoVacioAntes && !Character.isLetterOrDigit(c) && Character.isWhitespace(c)) {
+            evt.consume();
+        } else if (!Character.isLetterOrDigit(c) && Character.isWhitespace(c) && c != '-' && c != '.') {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Ingrese letras,numeros,guion,punto", "Error de entrada", JOptionPane.ERROR_MESSAGE);
+        }
+        campoVacioAntes = textField.getText().isEmpty();
+        if (textField.getText().length() >= 8) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_ContraseñaKeyTyped
+
+    private void PesoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_PesoKeyTyped
+
+        char c = evt.getKeyChar();
+
+        // Verificar si el carácter ingresado es un dígito o un punto decimal
+        if (!Character.isDigit(c) && c != '.') {
+            evt.consume(); // Consumir el evento para evitar que se ingrese el carácter no válido
+        }
+
+        // Verificar la longitud total y la posición del punto decimal
+        String text = Peso.getText();
+        if (text.contains(".")) {
+            int dotIndex = text.indexOf('.');
+            // Permitir solo un punto decimal y un máximo de 2 decimales después del punto
+            if (text.length() - dotIndex > 2) {
+                evt.consume();
+            }
+        }
+    }//GEN-LAST:event_PesoKeyTyped
+
+    private void AlturaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_AlturaKeyTyped
+        char c = evt.getKeyChar();
+
+        // Verificar si el carácter ingresado es un dígito o un punto decimal
+        if (!Character.isDigit(c) && c != '.') {
+            evt.consume(); // Consumir el evento para evitar que se ingrese el carácter no válido
+        }
+
+        // Verificar la longitud total y la posición del punto decimal
+        String text = Altura.getText();
+        if (text.contains(".")) {
+            int dotIndex = text.indexOf('.');
+            // Permitir solo un punto decimal y un máximo de 2 decimales después del punto
+            if (text.length() - dotIndex > 2) {
+                evt.consume();
+            }
+        }
+    }//GEN-LAST:event_AlturaKeyTyped
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // Verificar si todos los campos obligatorios están llenos
+        if (Nombre.getText().isEmpty() || Apellido.getText().isEmpty() || Usuario.getText().isEmpty()
+                || Contraseña.getText().isEmpty() || Edad.getValue() == null || Peso.getText().isEmpty()
+                || Altura.getText().isEmpty() || (!Activo.isSelected() && !Medio.isSelected() && !Sedentario.isSelected())
+                || (!Femenino.isSelected() && !Masculino.isSelected())) {
+            // Mostrar un mensaje de advertencia y salir del método
+            JOptionPane.showMessageDialog(this, "Completa todos los campos antes de guardar.", "Advertencia", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        // Crear una nueva instancia de Clase_Registrarse y asignar valores
+        Clase_Registrarse nuevoRegistro = new Clase_Registrarse();
+        nuevoRegistro.setNombre(Nombre.getText());
+        nuevoRegistro.setApellido(Apellido.getText());
+        nuevoRegistro.setUsuario(Usuario.getText());
+        nuevoRegistro.setContraseña(Contraseña.getText());
+
+        // Validar la edad en el rango de 14 a 80
+        int edadValue = (int) Edad.getValue();
+        if (edadValue >= 14 && edadValue <= 80) {
+            nuevoRegistro.setEdad(edadValue);
+        } else {
+            // Mostrar un mensaje de error y salir del método
+            JOptionPane.showMessageDialog(this, "La edad debe estar en el rango de 14 a 80.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        nuevoRegistro.setPeso(Double.parseDouble(Peso.getText()));
+        nuevoRegistro.setAltura(Double.parseDouble(Altura.getText()));
+
+        if (Activo.isSelected()) {
+            nuevoRegistro.setActividad("Activo");
+        } else if (Medio.isSelected()) {
+            nuevoRegistro.setActividad("Medio");
+        } else if (Sedentario.isSelected()) {
+            nuevoRegistro.setActividad("Sedentario");
+        }
+
+        if (Femenino.isSelected()) {
+            nuevoRegistro.setGenero("Femenino");
+        } else if (Masculino.isSelected()) {
+            nuevoRegistro.setGenero("Masculino");
+        }
+
+        // Añadir el nuevo registro al ArrayList
+        Lista.add(nuevoRegistro);
+
+        // Mostrar un mensaje de éxito
+        JOptionPane.showMessageDialog(this, "Datos guardados exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+
+        // Después de guardar los datos, regresar a la pantalla de inicio de sesión
+        Login ventanaLogin = new Login();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
+        ventanaLogin.setVisible(true);
+
+        // Cierra la ventana actual
+        this.dispose();
+
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void MedioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MedioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MedioActionPerformed
+
+    private void SedentarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SedentarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_SedentarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -60,14 +562,19 @@ public class Registro extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registro.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registro.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registro.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Registro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registro.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -79,5 +586,35 @@ public class Registro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton Activo;
+    private javax.swing.JTextField Altura;
+    private javax.swing.JTextField Apellido;
+    private javax.swing.JPasswordField Contraseña;
+    private javax.swing.JSpinner Edad;
+    private javax.swing.JRadioButton Femenino;
+    private javax.swing.JRadioButton Masculino;
+    private javax.swing.JRadioButton Medio;
+    private javax.swing.JTextField Nombre;
+    private javax.swing.JTextField Peso;
+    private javax.swing.JRadioButton Sedentario;
+    private javax.swing.JTextField Usuario;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
+
 }
