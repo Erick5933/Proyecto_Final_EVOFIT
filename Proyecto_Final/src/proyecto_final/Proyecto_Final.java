@@ -16,6 +16,20 @@ public class Proyecto_Final {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        
+        
+        /**
+     * @param args the command line arguments
+     */
+ 
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Login().setVisible(true);
+            }
+        });
+    }
     }
     
-}
+
