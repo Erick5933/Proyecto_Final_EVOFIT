@@ -174,6 +174,7 @@ public class Registro extends javax.swing.JFrame {
 
         Usuario.setBackground(new java.awt.Color(70, 86, 132));
         Usuario.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario.setCaretColor(new java.awt.Color(255, 255, 255));
         Usuario.setVerifyInputWhenFocusTarget(false);
         Usuario.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -183,6 +184,7 @@ public class Registro extends javax.swing.JFrame {
 
         Peso.setBackground(new java.awt.Color(70, 86, 132));
         Peso.setForeground(new java.awt.Color(255, 255, 255));
+        Peso.setCaretColor(new java.awt.Color(255, 255, 255));
         Peso.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PesoActionPerformed(evt);
@@ -196,6 +198,7 @@ public class Registro extends javax.swing.JFrame {
 
         Altura.setBackground(new java.awt.Color(70, 86, 132));
         Altura.setForeground(new java.awt.Color(255, 255, 255));
+        Altura.setCaretColor(new java.awt.Color(255, 255, 255));
         Altura.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 AlturaKeyTyped(evt);
@@ -215,6 +218,7 @@ public class Registro extends javax.swing.JFrame {
 
         Contraseña.setBackground(new java.awt.Color(70, 86, 132));
         Contraseña.setForeground(new java.awt.Color(255, 255, 255));
+        Contraseña.setCaretColor(new java.awt.Color(255, 255, 255));
         Contraseña.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 ContraseñaKeyTyped(evt);
@@ -234,7 +238,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(129, 43, 209));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setText("Registrar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -280,7 +284,7 @@ public class Registro extends javax.swing.JFrame {
             }
         });
 
-        regresar.setBackground(new java.awt.Color(129, 43, 209));
+        regresar.setBackground(new java.awt.Color(255, 255, 255));
         regresar.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         regresar.setText("Regresar");
         regresar.addActionListener(new java.awt.event.ActionListener() {
@@ -316,12 +320,8 @@ public class Registro extends javax.swing.JFrame {
                                         .addComponent(Usuario)))
                                 .addComponent(Contraseña))
                             .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
                         .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(fondoLayout.createSequentialGroup()
-                                .addComponent(regresar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(Edad, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel8)
@@ -335,8 +335,12 @@ public class Registro extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(Medio, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(Sedentario, javax.swing.GroupLayout.PREFERRED_SIZE, 82, Short.MAX_VALUE))))
-                        .addContainerGap(38, Short.MAX_VALUE))))
+                                    .addComponent(Sedentario, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)))
+                            .addGroup(fondoLayout.createSequentialGroup()
+                                .addComponent(regresar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap(39, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ejemplo, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -389,8 +393,8 @@ public class Registro extends javax.swing.JFrame {
                     .addComponent(Femenino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38))
         );
 

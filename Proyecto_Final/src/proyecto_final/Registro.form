@@ -106,13 +106,8 @@
                               </Group>
                               <Component id="Nombre" min="-2" pref="210" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace max="32767" attributes="0"/>
+                          <EmptySpace pref="7" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <Component id="regresar" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jButton1" min="-2" pref="118" max="-2" attributes="0"/>
-                              </Group>
                               <Component id="Edad" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
                               <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
                                   <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
@@ -129,8 +124,13 @@
                                       <Component id="Sedentario" pref="82" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="regresar" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jButton1" min="-2" pref="118" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
-                          <EmptySpace pref="38" max="32767" attributes="0"/>
+                          <EmptySpace pref="39" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -197,8 +197,8 @@
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton1" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                       <Component id="regresar" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="jButton1" alignment="3" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
               </Group>
@@ -362,6 +362,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
           </Properties>
           <Events>
@@ -376,6 +379,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="PesoActionPerformed"/>
@@ -388,6 +394,9 @@
               <Color blue="84" green="56" red="46" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
           </Properties>
@@ -432,6 +441,9 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
+            <Property name="caretColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
           </Properties>
           <Events>
             <EventHandler event="keyTyped" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="Contrase&#xf1;aKeyTyped"/>
@@ -457,7 +469,7 @@
         <Component class="javax.swing.JButton" name="jButton1">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="d1" green="2b" red="81" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="14" style="1"/>
@@ -552,7 +564,7 @@
         <Component class="javax.swing.JButton" name="regresar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="d1" green="2b" red="81" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="14" style="1"/>
