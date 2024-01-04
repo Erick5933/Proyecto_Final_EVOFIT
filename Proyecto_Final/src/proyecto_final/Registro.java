@@ -10,6 +10,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import proyecto_final.Clases.Clase_Registrarse;
 import static proyecto_final.Login.Lista;
+import java.awt.Color;
 
 /**
  *
@@ -26,12 +27,15 @@ public class Registro extends javax.swing.JFrame {
         this.setResizable(false);
         //this.setUndecorated(true);
 
+        Edad.getEditor().getComponent(0).setForeground(Color.WHITE);
+        Edad.getEditor().getComponent(0).setBackground(new Color(70, 86, 132));
+
         TextPrompt nombre = new TextPrompt("Ingrese nombre completo", Nombre);
         TextPrompt apellido = new TextPrompt("Ingrese apellido completo", Apellido);
         TextPrompt usuario = new TextPrompt("Ingrese su usuario", Usuario);
         TextPrompt contraseña = new TextPrompt("Ingrese su contraseña", Contraseña);
-        TextPrompt peso = new TextPrompt("Ingrese su peso", Peso);
-        TextPrompt altura = new TextPrompt("Ingrese su altura", Altura);
+        TextPrompt peso = new TextPrompt("Ingrese su peso (En Kg)", Peso);
+        TextPrompt altura = new TextPrompt("Ingrese su altura (En Metros)", Altura);
     }
 
     /**
@@ -217,6 +221,19 @@ public class Registro extends javax.swing.JFrame {
             }
         });
 
+        Edad.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 12)); // NOI18N
+        Edad.setModel(new javax.swing.SpinnerNumberModel(14, 14, 70, 1));
+        Edad.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                EdadStateChanged(evt);
+            }
+        });
+        Edad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EdadMouseClicked(evt);
+            }
+        });
+
         jButton1.setBackground(new java.awt.Color(129, 43, 209));
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setText("Registrar");
@@ -299,7 +316,7 @@ public class Registro extends javax.swing.JFrame {
                                         .addComponent(Usuario)))
                                 .addComponent(Contraseña))
                             .addComponent(Nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(fondoLayout.createSequentialGroup()
                                 .addComponent(regresar)
@@ -318,7 +335,7 @@ public class Registro extends javax.swing.JFrame {
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addComponent(Medio, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(Sedentario, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE))))
+                                    .addComponent(Sedentario, javax.swing.GroupLayout.PREFERRED_SIZE, 82, Short.MAX_VALUE))))
                         .addContainerGap(38, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -629,8 +646,35 @@ public class Registro extends javax.swing.JFrame {
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         dispose();//GEN-LAST:event_jLabel1MouseClicked
-  
     }
+    private void EdadMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EdadMouseClicked
+        int edadSeleccionada = (int) Edad.getValue();
+
+        // Verificar si la edad está dentro del rango permitido
+        if (edadSeleccionada < 14 || edadSeleccionada > 70) {
+            // Mostrar un mensaje de error o tomar la acción correspondiente
+            JOptionPane.showMessageDialog(this, "La edad debe estar entre 14 y 70 años", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            // La edad está dentro del rango permitido, realizar las acciones necesarias
+            // ...
+        }
+    }//GEN-LAST:event_EdadMouseClicked
+
+    private void EdadStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_EdadStateChanged
+        // TODO add your handling code here:
+
+        int edadSeleccionada = (int) Edad.getValue();
+
+        // Verificar si la edad está dentro del rango permitido
+        if (edadSeleccionada < 14 || edadSeleccionada > 70) {
+            // Mostrar un mensaje de error o tomar la acción correspondiente
+            JOptionPane.showMessageDialog(this, "La edad debe estar entre 14 y 70 años", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            // La edad está dentro del rango permitido, realizar las acciones necesarias
+            // ...
+        }
+    }//GEN-LAST:event_EdadStateChanged
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JRadioButton Activo;
