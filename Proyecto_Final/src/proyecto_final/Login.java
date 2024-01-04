@@ -177,6 +177,11 @@ public class Login extends javax.swing.JFrame {
                 txtpasswordMousePressed(evt);
             }
         });
+        txtpassword.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtpasswordActionPerformed(evt);
+            }
+        });
         jPanel2.add(txtpassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 230, 40));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
@@ -367,6 +372,10 @@ public class Login extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void txtpasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtpasswordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtpasswordActionPerformed
 
     /**
      * @param args the command line arguments
