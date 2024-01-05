@@ -63,6 +63,11 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         bot_comida.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
         bot_comida.setText("comida");
         bot_comida.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bot_comida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bot_comidaActionPerformed(evt);
+            }
+        });
         getContentPane().add(bot_comida, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 130, 40));
 
         bot_noticias.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
@@ -82,11 +87,18 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bot_noticiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_noticiasActionPerformed
-        noticias noti = new noticias();
+        Noticias noti = new Noticias();
         noti.setVisible(true);
         this.dispose();
 
     }//GEN-LAST:event_bot_noticiasActionPerformed
+
+    private void bot_comidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_comidaActionPerformed
+        // TODO add your handling code here:
+        Comidas noti = new Comidas();
+        noti.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_bot_comidaActionPerformed
 
     /**
      * @param args the command line arguments
