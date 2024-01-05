@@ -196,6 +196,11 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound2.setRoundBottomRight(20);
         panelRound2.setRoundTopLeft(20);
         panelRound2.setRoundTopRight(20);
+        panelRound2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelRound2MouseClicked(evt);
+            }
+        });
         panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/lastic_bottle_icon_251304.png"))); // NOI18N
@@ -590,6 +595,13 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void panelRound2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelRound2MouseClicked
+Agua newFrame = new Agua();
+        newFrame.setVisible(true);
+        this.dispose();
+        newFrame.setLocationRelativeTo(null);        // TODO add your handling code here:
+    }//GEN-LAST:event_panelRound2MouseClicked
 
     /**
      * @param args the command line arguments

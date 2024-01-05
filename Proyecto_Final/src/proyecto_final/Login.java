@@ -21,6 +21,7 @@ public class Login extends javax.swing.JFrame {
 
     public static ArrayList<Clase_Registrarse> Lista = new ArrayList<>();
 
+
     /**
      * Creates new form Login
      */
