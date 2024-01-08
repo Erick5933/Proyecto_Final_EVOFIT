@@ -56,11 +56,11 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound4 = new proyecto_final.PanelRound();
         jLabel1 = new javax.swing.JLabel();
         panelRound2 = new proyecto_final.PanelRound();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
         panelRound5 = new proyecto_final.PanelRound();
-        jLabel5 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         panelRound7 = new proyecto_final.PanelRound();
-        jLabel10 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         panelRound8 = new proyecto_final.PanelRound();
         jLabel7 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
@@ -68,6 +68,7 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
         panelRound9 = new proyecto_final.PanelRound();
+        jLabel10 = new javax.swing.JLabel();
         panelRound10 = new proyecto_final.PanelRound();
         jLabel9 = new javax.swing.JLabel();
         panelRound11 = new proyecto_final.PanelRound();
@@ -203,8 +204,8 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         });
         panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/lastic_bottle_icon_251304.png"))); // NOI18N
-        panelRound2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, -1));
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1486348819-back-backwards-repeat-arrows-arrow-blue_80473.png"))); // NOI18N
+        panelRound2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         panelRound5.setBackground(new java.awt.Color(71, 71, 132));
         panelRound5.setPreferredSize(new java.awt.Dimension(100, 80));
@@ -214,8 +215,8 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound5.setRoundTopRight(20);
         panelRound5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/moon_icon-icons.com_62253.png"))); // NOI18N
-        panelRound5.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, 60));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/lastic_bottle_icon_251304.png"))); // NOI18N
+        panelRound5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, -1));
 
         panelRound7.setBackground(new java.awt.Color(71, 71, 132));
         panelRound7.setPreferredSize(new java.awt.Dimension(100, 80));
@@ -225,8 +226,8 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound7.setRoundTopRight(20);
         panelRound7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/accessories-calculator-icon_37717.png"))); // NOI18N
-        panelRound7.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 70, -1));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/moon_icon-icons.com_62253.png"))); // NOI18N
+        panelRound7.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, 60));
 
         panelRound8.setBackground(new java.awt.Color(71, 71, 132));
         panelRound8.setPreferredSize(new java.awt.Dimension(100, 80));
@@ -273,6 +274,9 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound9.setRoundTopLeft(20);
         panelRound9.setRoundTopRight(20);
         panelRound9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/accessories-calculator-icon_37717.png"))); // NOI18N
+        panelRound9.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 70, -1));
 
         panelRound10.setBackground(new java.awt.Color(71, 71, 132));
         panelRound10.setPreferredSize(new java.awt.Dimension(100, 80));
@@ -657,6 +661,7 @@ Agua newFrame = new Agua();
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
