@@ -205,6 +205,11 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1486348819-back-backwards-repeat-arrows-arrow-blue_80473.png"))); // NOI18N
+        jLabel26.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel26MouseClicked(evt);
+            }
+        });
         panelRound2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         panelRound5.setBackground(new java.awt.Color(71, 71, 132));
@@ -215,8 +220,14 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound5.setRoundTopRight(20);
         panelRound5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/lastic_bottle_icon_251304.png"))); // NOI18N
-        panelRound5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, -1));
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        panelRound5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 100, -1));
 
         panelRound7.setBackground(new java.awt.Color(71, 71, 132));
         panelRound7.setPreferredSize(new java.awt.Dimension(100, 80));
@@ -226,8 +237,14 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound7.setRoundTopRight(20);
         panelRound7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/moon_icon-icons.com_62253.png"))); // NOI18N
-        panelRound7.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 60, 60));
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        panelRound7.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 80));
 
         panelRound8.setBackground(new java.awt.Color(71, 71, 132));
         panelRound8.setPreferredSize(new java.awt.Dimension(100, 80));
@@ -235,11 +252,16 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound8.setRoundBottomRight(20);
         panelRound8.setRoundTopLeft(20);
         panelRound8.setRoundTopRight(20);
+        panelRound8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelRound8MouseClicked(evt);
+            }
+        });
         panelRound8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1455739720_Kitchen_Bold_Line_Color_Mix-28_icon-icons.com_53404.png"))); // NOI18N
         jLabel7.setText("ALIMENTOS");
-        panelRound8.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -20, 70, 100));
+        panelRound8.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -30, 70, 110));
 
         jLabel17.setBackground(new java.awt.Color(102, 153, 0));
         jLabel17.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 24)); // NOI18N
@@ -601,11 +623,42 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void panelRound2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelRound2MouseClicked
-Agua newFrame = new Agua();
+        Agua newFrame = new Agua();
         newFrame.setVisible(true);
         this.dispose();
         newFrame.setLocationRelativeTo(null);        // TODO add your handling code here:
     }//GEN-LAST:event_panelRound2MouseClicked
+
+    private void jLabel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseClicked
+        // TODO add your handling code here:
+
+        Login noti = new Login();
+        noti.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel26MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+        // TODO add your handling code here:
+
+        Agua noti = new Agua();
+        noti.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        
+        //// ---------- Dormir 
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void panelRound8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelRound8MouseClicked
+        // TODO add your handling code here:
+        
+        Alimentos_Usuarios noti = new Alimentos_Usuarios();
+        noti.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_panelRound8MouseClicked
 
     /**
      * @param args the command line arguments

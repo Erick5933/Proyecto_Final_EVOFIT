@@ -6,7 +6,6 @@
 package proyecto_final;
 
 import java.awt.Color;
-import java.awt.Cursor;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import proyecto_final.Clases.Clase_Registrarse;

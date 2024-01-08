@@ -53,6 +53,11 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         bot_usuario.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
         bot_usuario.setText("usuario");
         bot_usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bot_usuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bot_usuarioActionPerformed(evt);
+            }
+        });
         getContentPane().add(bot_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, 130, 40));
 
         bot_frases.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
@@ -99,6 +104,10 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         noti.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_bot_comidaActionPerformed
+
+    private void bot_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_usuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bot_usuarioActionPerformed
 
     /**
      * @param args the command line arguments
