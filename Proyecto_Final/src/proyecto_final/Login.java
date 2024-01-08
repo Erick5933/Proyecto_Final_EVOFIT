@@ -338,12 +338,9 @@ public class Login extends javax.swing.JFrame {
             return;
         }
 
-// Puedes agregar tu lógica de validación personalizada aquí
         Validaciones validar = new Validaciones();
 
-// Puedes agregar más lógica de validación para la contraseña si es necesario
         if (!validar.ValidarContraseña(contraseña)) {
-            // Hacer algo si la contraseña no es válida, por ejemplo, mostrar un mensaje
             JOptionPane.showMessageDialog(this, "Contraseña no válida, ingrese hasta 8 caracteres");
             txtpassword.setText("********");
             txtpassword.setForeground(Color.gray);
@@ -355,14 +352,12 @@ public class Login extends javax.swing.JFrame {
             return; // Agregamos este return para salir del método si el nombre de usuario no es válido
         }
 
-// Si llega hasta aquí, la validación fue exitosa
-// Puedes agregar la lógica para el inicio de sesión exitoso aquí
         JOptionPane.showMessageDialog(this, "Inicio de sesión exitoso.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
 
         Persona_Interfaz_Inicio newFrame = new Persona_Interfaz_Inicio();
         newFrame.setVisible(true);
         this.dispose();
-        newFrame.setLocationRelativeTo(null);
+    
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
