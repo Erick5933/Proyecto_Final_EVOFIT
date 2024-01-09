@@ -93,8 +93,8 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
                 .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound2Layout.createSequentialGroup()
-                    .addContainerGap(17, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(33, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(31, Short.MAX_VALUE)))
         );
         panelRound2Layout.setVerticalGroup(
@@ -117,7 +117,7 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
                 jLabel4MouseClicked(evt);
             }
         });
-        panelRound1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 450, 40, -1));
+        panelRound1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 40, -1));
 
         panelRound3.setBackground(new java.awt.Color(60, 73, 132));
         panelRound3.setRoundBottomLeft(40);
@@ -314,9 +314,9 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
         panelRound10.setLayout(panelRound10Layout);
         panelRound10Layout.setHorizontalGroup(
             panelRound10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound10Layout.createSequentialGroup()
-                .addGap(0, 3, Short.MAX_VALUE)
-                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(panelRound10Layout.createSequentialGroup()
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 3, Short.MAX_VALUE))
         );
         panelRound10Layout.setVerticalGroup(
             panelRound10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -325,7 +325,7 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        panelRound1.add(panelRound10, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 450, 170, 40));
+        panelRound1.add(panelRound10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 170, 40));
 
         jLabel8.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -337,7 +337,7 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("DESAYUNO");
-        panelRound1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, 40));
+        panelRound1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, 30));
 
         jLabel10.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
@@ -363,7 +363,7 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, 517, Short.MAX_VALUE)
+            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
         );
 
         pack();
@@ -404,6 +404,13 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldBajar4ActionPerformed
 
     private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+
+        Miscomidas ventanaLogin = new Miscomidas();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
+        ventanaLogin.setVisible(true);
+
+        // Cierra la ventana actual
+        this.dispose();
+
 
     }//GEN-LAST:event_jLabel15MouseClicked
 
