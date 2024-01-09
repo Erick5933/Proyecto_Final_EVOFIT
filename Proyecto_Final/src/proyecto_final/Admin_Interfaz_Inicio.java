@@ -106,7 +106,11 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_bot_comidaActionPerformed
 
     private void bot_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_usuarioActionPerformed
-        // TODO add your handling code here:
+            AdminUsuario newFrame = new AdminUsuario();
+             newFrame.setVisible(true);
+             this.dispose();
+             newFrame.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_bot_usuarioActionPerformed
 
     /**

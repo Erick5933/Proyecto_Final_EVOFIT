@@ -9,18 +9,23 @@ import Proyecto_Final_Ocultar_letra.TextPrompt;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import proyecto_final.Clases.Clase_Registrarse;
-import static proyecto_final.Login.Lista;
 import java.awt.Color;
+import java.util.ArrayList;
 
 /**
  *
  * @author Erick
  */
 public class Registro extends javax.swing.JFrame {
+    public static ArrayList<Clase_Registrarse> Lista = new ArrayList<>();
+        private AdminUsuario adminUsuario;
+
 
     /**
      * Creates new form Registro
      */
+      
+
     public Registro() {
         initComponents();
         this.setLocationRelativeTo(null);
@@ -344,7 +349,7 @@ public class Registro extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(ejemplo, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(140, 140, 140))
+                .addGap(126, 126, 126))
         );
         fondoLayout.setVerticalGroup(
             fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -614,12 +619,15 @@ public class Registro extends javax.swing.JFrame {
         } else if (Masculino.isSelected()) {
             nuevoRegistro.setGenero("Masculino");
         }
+        
 
         // Añadir el nuevo registro al ArrayList
         Lista.add(nuevoRegistro);
+        
 
         // Mostrar un mensaje de éxito
         JOptionPane.showMessageDialog(this, "Datos guardados exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+
 
         // Después de guardar los datos, regresar a la pantalla de inicio de sesión
         Login ventanaLogin = new Login();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
