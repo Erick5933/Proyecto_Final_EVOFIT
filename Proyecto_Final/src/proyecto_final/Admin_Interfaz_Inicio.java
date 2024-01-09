@@ -129,7 +129,7 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void bot_noticiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_noticiasActionPerformed
-        Noticias noti = new Noticias();
+        Noticias_Admin noti = new Noticias_Admin();
         noti.setVisible(true);
         this.dispose();
 
