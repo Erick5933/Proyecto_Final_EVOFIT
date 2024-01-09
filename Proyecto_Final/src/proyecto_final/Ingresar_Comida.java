@@ -14,6 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
+import static proyecto_final.Admin_Interfaz_Inicio.listaComida;
 import proyecto_final.Clases.Comidas_Clase;
 
 /**
@@ -41,30 +42,6 @@ public class Ingresar_Comida extends javax.swing.JFrame {
         TextPrompt calorias = new TextPrompt("Ejemplo: 200", Calorias);
         TextPrompt porcion = new TextPrompt("Ejemplo: 150 g", Porcion);
 
-        Incrementar_Codigo();
-
-    }
-
-    private int currentUserCode = 1;
-
-    private void Codigo_Incremento() {
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        Codigo = new JTextField(10);
-        Codigo.setEditable(false);
-        getContentPane().add(Codigo);
-        pack();
-        setLocationRelativeTo(null); // Centra la ventana en la pantalla
-        addWindowListener(new WindowAdapter() {
-            public void windowOpened(WindowEvent e) {
-                // Incrementa el código y muestra en el TextField al abrir la ventana
-                Incrementar_Codigo();
-            }
-        });
-    }
-
-    private void Incrementar_Codigo() {
-        Codigo.setText(String.valueOf(currentUserCode));
-        currentUserCode++;
     }
 
     /**
@@ -100,7 +77,7 @@ public class Ingresar_Comida extends javax.swing.JFrame {
         Calorias = new javax.swing.JTextField();
         Porcion = new javax.swing.JTextField();
         panelRound2 = new proyecto_final.PanelRound();
-        Guardar = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -213,12 +190,12 @@ public class Ingresar_Comida extends javax.swing.JFrame {
         panelRound2.setRoundTopLeft(40);
         panelRound2.setRoundTopRight(40);
 
-        Guardar.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        Guardar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Guardar.setText("Guardar");
-        Guardar.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setText("Ingresar");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                GuardarMouseClicked(evt);
+                jLabel7MouseClicked(evt);
             }
         });
 
@@ -226,17 +203,13 @@ public class Ingresar_Comida extends javax.swing.JFrame {
         panelRound2.setLayout(panelRound2Layout);
         panelRound2Layout.setHorizontalGroup(
             panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(Guardar, javax.swing.GroupLayout.DEFAULT_SIZE, 92, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE)
         );
         panelRound2Layout.setVerticalGroup(
             panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound2Layout.createSequentialGroup()
-                .addGap(2, 2, 2)
-                .addComponent(Guardar)
-                .addGap(2, 2, 2))
+            .addGroup(panelRound2Layout.createSequentialGroup()
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 2, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
@@ -273,9 +246,9 @@ public class Ingresar_Comida extends javax.swing.JFrame {
                             .addComponent(jLabel9, javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Calorias, javax.swing.GroupLayout.Alignment.LEADING)))
                     .addGroup(panelRound1Layout.createSequentialGroup()
-                        .addGap(132, 132, 132)
+                        .addGap(251, 251, 251)
                         .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
         panelRound1Layout.setVerticalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -324,12 +297,15 @@ public class Ingresar_Comida extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Carbohidrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
                 .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(panelRound1Layout.createSequentialGroup()
+                        .addComponent(Carbohidrato, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(panelRound1Layout.createSequentialGroup()
+                        .addComponent(panelRound2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(19, 19, 19))))
         );
 
         jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(29, 29, -1, 340));
@@ -481,41 +457,44 @@ public class Ingresar_Comida extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_jLabel6MouseClicked
 
-    private void GuardarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_GuardarMouseClicked
-        // Obtener valores de los campos de texto u otros componentes
-        String codigo = Codigo.getText();
-        String nombre = Nombre.getText();
-        String tipo = Tipo.getText();
-        String cantidadProteicoStr = Proteina.getText();
-        String cantidadCarbohidratosStr = Carbohidrato.getText();
-        String cantidadCaloriasStr = Calorias.getText();
-        String tamañoPorcionStr = Porcion.getText();
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        // TODO add your handling code here:
 
-        // Validar que los campos obligatorios no estén vacíos
-        if (codigo.isEmpty() || nombre.isEmpty() || tipo.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Los campos obligatorios no pueden estar vacíos", "Error", JOptionPane.ERROR_MESSAGE);
+        // Verificar si todos los campos obligatorios están llenos
+        if (Codigo.getText().isEmpty() || Nombre.getText().isEmpty() || Tipo.getText().isEmpty() || Proteina.getText().isEmpty()
+                || Carbohidrato.getText().isEmpty() || Calorias.getText().isEmpty()
+                || Porcion.getText().isEmpty()) {
+            // Mostrar un mensaje de advertencia y salir del método
+            JOptionPane.showMessageDialog(this, "Completa todos los campos antes de guardar.", "Advertencia", JOptionPane.WARNING_MESSAGE);
             return;
         }
 
-        // Validar y convertir cantidades a números
-        double cantidadProteico, cantidadCarbohidratos, cantidadCalorias;
-        int tamañoPorcion;
+        // Crear una nueva instancia de Clase_Registrarse y asignar valores
+        Comidas_Clase nuevoRegistro = new Comidas_Clase();
+        nuevoRegistro.setCodigo(Codigo.getText());
+        nuevoRegistro.setNombre(Nombre.getText());
+        nuevoRegistro.setTipo(Tipo.getText());
+        nuevoRegistro.setCantidad_Proteico(Double.parseDouble(Proteina.getText()));
+        nuevoRegistro.setCantidad_Carbodidratos(Double.parseDouble(Carbohidrato.getText()));
 
-        try {
-            cantidadProteico = Double.parseDouble(cantidadProteicoStr);
-            cantidadCarbohidratos = Double.parseDouble(cantidadCarbohidratosStr);
-            cantidadCalorias = Double.parseDouble(cantidadCaloriasStr);
-            tamañoPorcion = Integer.parseInt(tamañoPorcionStr);
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "Por favor, ingrese números válidos para las cantidades", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
+        nuevoRegistro.setCantidad_Calorías(Double.parseDouble(Calorias.getText()));
+        nuevoRegistro.setTamaño_Porción(Integer.parseInt(Porcion.getText()));
 
-        // Aquí he utilizado un mensaje de JOptionPane para simular el guardado
-        JOptionPane.showMessageDialog(this, "Datos guardados correctamente", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+        // Añadir el nuevo registro al ArrayList
+        listaComida.add(nuevoRegistro);
+
+        // Mostrar un mensaje de éxito
+        JOptionPane.showMessageDialog(this, "Datos guardados exitosamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+
+        // Después de guardar los datos, regresar a la pantalla de inicio de sesión
+        Comidas comida = new Comidas();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
+        comida.setVisible(true);
+
+        // Cierra la ventana actual
+        this.dispose();
 
 
-    }//GEN-LAST:event_GuardarMouseClicked
+    }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
      * @param args the command line arguments
@@ -556,7 +535,6 @@ public class Ingresar_Comida extends javax.swing.JFrame {
     private javax.swing.JTextField Calorias;
     private javax.swing.JTextField Carbohidrato;
     private javax.swing.JTextField Codigo;
-    private javax.swing.JLabel Guardar;
     private javax.swing.JTextField Nombre;
     private javax.swing.JTextField Porcion;
     private javax.swing.JTextField Proteina;
@@ -567,6 +545,7 @@ public class Ingresar_Comida extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
