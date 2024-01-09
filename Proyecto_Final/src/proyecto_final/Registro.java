@@ -199,6 +199,11 @@ public class Registro extends javax.swing.JFrame {
         Altura.setBackground(new java.awt.Color(70, 86, 132));
         Altura.setForeground(new java.awt.Color(255, 255, 255));
         Altura.setCaretColor(new java.awt.Color(255, 255, 255));
+        Altura.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AlturaActionPerformed(evt);
+            }
+        });
         Altura.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 AlturaKeyTyped(evt);
@@ -678,6 +683,10 @@ public class Registro extends javax.swing.JFrame {
             // ...
         }
     }//GEN-LAST:event_EdadStateChanged
+
+    private void AlturaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AlturaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AlturaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -19,7 +19,7 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     public Admin_Interfaz_Inicio() {
         initComponents();
         this.setLocationRelativeTo(this);
-        
+
     }
 
     /**
@@ -37,6 +37,11 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         bot_frases = new javax.swing.JButton();
         bot_comida = new javax.swing.JButton();
         bot_noticias = new javax.swing.JButton();
+        panelRound1 = new proyecto_final.PanelRound();
+        jLabel8 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
 
         jPasswordField1.setText("jPasswordField1");
@@ -47,8 +52,7 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         titulo.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
-        titulo.setText("ADMIN");
-        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 120, 40));
+        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 120, 40));
 
         bot_usuario.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
         bot_usuario.setText("usuario");
@@ -58,12 +62,12 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
                 bot_usuarioActionPerformed(evt);
             }
         });
-        getContentPane().add(bot_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 60, 130, 40));
+        getContentPane().add(bot_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 200, 70));
 
         bot_frases.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
         bot_frases.setText("frases");
         bot_frases.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(bot_frases, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 130, 40));
+        getContentPane().add(bot_frases, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 200, 60));
 
         bot_comida.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
         bot_comida.setText("comida");
@@ -73,7 +77,7 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
                 bot_comidaActionPerformed(evt);
             }
         });
-        getContentPane().add(bot_comida, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 220, 130, 40));
+        getContentPane().add(bot_comida, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 200, 60));
 
         bot_noticias.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
         bot_noticias.setText("noticias");
@@ -83,10 +87,38 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
                 bot_noticiasActionPerformed(evt);
             }
         });
-        getContentPane().add(bot_noticias, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 130, 40));
+        getContentPane().add(bot_noticias, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 150, 200, 60));
+
+        panelRound1.setBackground(new java.awt.Color(44, 44, 59));
+        panelRound1.setRoundBottomLeft(20);
+        panelRound1.setRoundBottomRight(20);
+        panelRound1.setRoundTopLeft(20);
+        panelRound1.setRoundTopRight(20);
+        panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("ADMIN");
+        panelRound1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
+        panelRound1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 305, 28));
+
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/Logo_conCirculo-removebg-preview (2).png"))); // NOI18N
+        panelRound1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 90, 330, 250));
+
+        getContentPane().add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/boton.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(904, 0, 30, 30));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1003541_1.png"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -20, 970, 580));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -109,6 +141,11 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bot_usuarioActionPerformed
 
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_jLabel3MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -129,7 +166,12 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     private javax.swing.JButton bot_noticias;
     private javax.swing.JButton bot_usuario;
     private javax.swing.JLabel fondo;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JSeparator jSeparator4;
+    private proyecto_final.PanelRound panelRound1;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 }
