@@ -5,6 +5,10 @@
  */
 package proyecto_final.Clases;
 
+import javax.swing.JRadioButton;
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Wendy LLivichuzhca
@@ -34,6 +38,10 @@ public class Clase_Registrarse {
         this.Altura = Altura;
         this.Actividad = Actividad;
         this.Genero = Genero;
+    }
+
+    public Clase_Registrarse(JTextField Nombre, JTextField Apellido, JTextField Usuario, JSpinner Edad, JRadioButton Masculino, JRadioButton Femenino) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     public String getNombre() {

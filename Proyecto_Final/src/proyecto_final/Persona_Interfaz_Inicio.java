@@ -326,6 +326,11 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/person_paper_id_card_profile_user_icon_131800.png"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
         panelRound11.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         javax.swing.GroupLayout panelRound4Layout = new javax.swing.GroupLayout(panelRound4);
@@ -684,6 +689,13 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         this.dispose();
         
     }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+AdminUsuario newFrame = new AdminUsuario();
+             newFrame.setVisible(true);
+             this.dispose();
+             newFrame.setLocationRelativeTo(null);           
+    }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
      * @param args the command line arguments
