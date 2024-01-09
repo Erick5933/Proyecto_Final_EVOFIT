@@ -17,8 +17,8 @@ import proyecto_final.Clases.Clase_Registrarse;
 public class Login extends javax.swing.JFrame {
 
     private boolean usuarioInteractuado = false;
+    public static ArrayList<Clase_Registrarse> Lista = Registro.Lista;
 
-    public static ArrayList<Clase_Registrarse> Lista = new ArrayList<>();
 
 
     /**
@@ -329,40 +329,37 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_txtpasswordMousePressed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String NombreUsuario = txtusername.getText().trim();
+       String NombreUsuario = txtusername.getText().trim();
         String contraseña = String.valueOf(txtpassword.getPassword());
 
-// Validar que el nombre de usuario y la contraseña no estén vacíos
+        // Validar que el nombre de usuario y la contraseña no estén vacíos
         if (NombreUsuario.isEmpty() || contraseña.isEmpty()) {
             JOptionPane.showMessageDialog(this, "Por favor, ingrese el nombre de usuario y la contraseña.", "Error", JOptionPane.ERROR_MESSAGE);
             return;
         }
 
-// Puedes agregar tu lógica de validación personalizada aquí
-        Validaciones validar = new Validaciones();
-
-// Puedes agregar más lógica de validación para la contraseña si es necesario
-        if (!validar.ValidarContraseña(contraseña)) {
-            // Hacer algo si la contraseña no es válida, por ejemplo, mostrar un mensaje
-            JOptionPane.showMessageDialog(this, "Contraseña no válida, ingrese hasta 8 caracteres");
-            txtpassword.setText("********");
-            txtpassword.setForeground(Color.gray);
-            return; // Agregamos este return para salir del método si la contraseña no es válida
+        // Buscar el usuario en la lista
+        boolean usuarioRegistrado = false;
+        for (Clase_Registrarse registrado : Lista) {
+            if (NombreUsuario.equals(registrado.getUsuario()) && contraseña.equals(registrado.getContraseña())) {
+                usuarioRegistrado = true;
+                break;
+            }
         }
 
-        if (txtusername.getText().isEmpty() || !validar.ValidarUusario(NombreUsuario)) {
-            JOptionPane.showMessageDialog(this, "Nombre de usuario no válido.", "Error", JOptionPane.ERROR_MESSAGE);
-            return; // Agregamos este return para salir del método si el nombre de usuario no es válido
+        // Si el usuario está registrado, mostrar un mensaje de inicio de sesión exitoso
+        if (usuarioRegistrado) {
+            JOptionPane.showMessageDialog(this, "Inicio de sesión exitoso.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+
+             Persona_Interfaz_Inicio newFrame = new Persona_Interfaz_Inicio();
+             newFrame.setVisible(true);
+             this.dispose();
+             newFrame.setLocationRelativeTo(null);
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
         }
-
-// Si llega hasta aquí, la validación fue exitosa
-// Puedes agregar la lógica para el inicio de sesión exitoso aquí
-        JOptionPane.showMessageDialog(this, "Inicio de sesión exitoso.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
-
-        Persona_Interfaz_Inicio newFrame = new Persona_Interfaz_Inicio();
-        newFrame.setVisible(true);
-        this.dispose();
-        newFrame.setLocationRelativeTo(null);
+    
+    
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked

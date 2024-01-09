@@ -28,17 +28,30 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
     private void initComponents() {
 
         panelRound1 = new proyecto_final.PanelRound();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
         panelRound2 = new proyecto_final.PanelRound();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        panelRound7 = new proyecto_final.PanelRound();
-        jLabel7 = new javax.swing.JLabel();
-        panelRound6 = new proyecto_final.PanelRound();
+        jLabel4 = new javax.swing.JLabel();
+        panelRound3 = new proyecto_final.PanelRound();
+        jTextFieldBajar1 = new javax.swing.JTextField();
+        panelRound5 = new proyecto_final.PanelRound();
+        jTextFieldBajar = new javax.swing.JTextField();
+        panelRound4 = new proyecto_final.PanelRound();
+        jTextFieldBajar2 = new javax.swing.JTextField();
+        panelRound8 = new proyecto_final.PanelRound();
+        jTextFieldBajar3 = new javax.swing.JTextField();
+        panelRound9 = new proyecto_final.PanelRound();
+        jTextFieldBajar4 = new javax.swing.JTextField();
+        panelRound10 = new proyecto_final.PanelRound();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -51,24 +64,6 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
         panelRound1.setRoundTopLeft(30);
         panelRound1.setRoundTopRight(30);
         panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/modificar.png"))); // NOI18N
-        panelRound1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 120, -1, 40));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/eliminar.png"))); // NOI18N
-        panelRound1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 180, -1, 40));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/agregar.png"))); // NOI18N
-        panelRound1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, -1, 40));
-
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane1.setViewportView(jList1);
-
-        panelRound1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 120, 130, -1));
 
         panelRound2.setBackground(new java.awt.Color(71, 71, 132));
         panelRound2.setRoundBottomLeft(20);
@@ -93,15 +88,14 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
         panelRound2.setLayout(panelRound2Layout);
         panelRound2Layout.setHorizontalGroup(
             panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound2Layout.createSequentialGroup()
+                .addGap(0, 390, Short.MAX_VALUE)
+                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound2Layout.createSequentialGroup()
-                    .addContainerGap(19, Short.MAX_VALUE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(24, Short.MAX_VALUE)))
+                    .addContainerGap(33, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 356, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(31, Short.MAX_VALUE)))
         );
         panelRound2Layout.setVerticalGroup(
             panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,60 +109,261 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
                     .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
-        panelRound1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 560, 50));
+        panelRound1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 50));
 
-        panelRound7.setBackground(new java.awt.Color(53, 55, 86));
-        panelRound7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        panelRound7.setRoundBottomRight(40);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/atras_32px.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        panelRound1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 40, -1));
 
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/buscar_morado.png"))); // NOI18N
+        panelRound3.setBackground(new java.awt.Color(60, 73, 132));
+        panelRound3.setRoundBottomLeft(40);
+        panelRound3.setRoundTopRight(40);
 
-        javax.swing.GroupLayout panelRound7Layout = new javax.swing.GroupLayout(panelRound7);
-        panelRound7.setLayout(panelRound7Layout);
-        panelRound7Layout.setHorizontalGroup(
-            panelRound7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound7Layout.createSequentialGroup()
+        jTextFieldBajar1.setEditable(false);
+        jTextFieldBajar1.setBackground(new java.awt.Color(60, 73, 132));
+        jTextFieldBajar1.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
+        jTextFieldBajar1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldBajar1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldBajar1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextFieldBajar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldBajar1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelRound3Layout = new javax.swing.GroupLayout(panelRound3);
+        panelRound3.setLayout(panelRound3Layout);
+        panelRound3Layout.setHorizontalGroup(
+            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jTextFieldBajar1, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
+                .addContainerGap())
         );
-        panelRound7Layout.setVerticalGroup(
-            panelRound7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound7Layout.createSequentialGroup()
-                .addComponent(jLabel7)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        panelRound1.add(panelRound7, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 70, -1, -1));
-
-        panelRound6.setBackground(new java.awt.Color(53, 55, 86));
-        panelRound6.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        panelRound6.setRoundTopLeft(40);
-        panelRound6.setVerifyInputWhenFocusTarget(false);
-
-        javax.swing.GroupLayout panelRound6Layout = new javax.swing.GroupLayout(panelRound6);
-        panelRound6.setLayout(panelRound6Layout);
-        panelRound6Layout.setHorizontalGroup(
-            panelRound6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-        );
-        panelRound6Layout.setVerticalGroup(
-            panelRound6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+        panelRound3Layout.setVerticalGroup(
+            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextFieldBajar1, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
-        panelRound1.add(panelRound6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, -1, 32));
+        panelRound1.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 380, 50));
+
+        panelRound5.setBackground(new java.awt.Color(70, 86, 132));
+        panelRound5.setRoundBottomLeft(40);
+        panelRound5.setRoundTopRight(40);
+
+        jTextFieldBajar.setEditable(false);
+        jTextFieldBajar.setBackground(new java.awt.Color(70, 86, 132));
+        jTextFieldBajar.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
+        jTextFieldBajar.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldBajar.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldBajar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextFieldBajar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldBajarActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelRound5Layout = new javax.swing.GroupLayout(panelRound5);
+        panelRound5.setLayout(panelRound5Layout);
+        panelRound5Layout.setHorizontalGroup(
+            panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextFieldBajar, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelRound5Layout.setVerticalGroup(
+            panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextFieldBajar, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        panelRound1.add(panelRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 380, 50));
+
+        panelRound4.setBackground(new java.awt.Color(60, 73, 132));
+        panelRound4.setRoundBottomLeft(40);
+        panelRound4.setRoundTopRight(40);
+
+        jTextFieldBajar2.setEditable(false);
+        jTextFieldBajar2.setBackground(new java.awt.Color(60, 73, 132));
+        jTextFieldBajar2.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
+        jTextFieldBajar2.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldBajar2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldBajar2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextFieldBajar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldBajar2ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelRound4Layout = new javax.swing.GroupLayout(panelRound4);
+        panelRound4.setLayout(panelRound4Layout);
+        panelRound4Layout.setHorizontalGroup(
+            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextFieldBajar2, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelRound4Layout.setVerticalGroup(
+            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextFieldBajar2, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        panelRound1.add(panelRound4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+
+        panelRound8.setBackground(new java.awt.Color(70, 86, 132));
+        panelRound8.setRoundBottomLeft(40);
+        panelRound8.setRoundTopRight(40);
+
+        jTextFieldBajar3.setEditable(false);
+        jTextFieldBajar3.setBackground(new java.awt.Color(70, 86, 132));
+        jTextFieldBajar3.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
+        jTextFieldBajar3.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldBajar3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldBajar3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextFieldBajar3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldBajar3ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelRound8Layout = new javax.swing.GroupLayout(panelRound8);
+        panelRound8.setLayout(panelRound8Layout);
+        panelRound8Layout.setHorizontalGroup(
+            panelRound8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextFieldBajar3, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelRound8Layout.setVerticalGroup(
+            panelRound8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextFieldBajar3, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        panelRound1.add(panelRound8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 380, 50));
+
+        panelRound9.setBackground(new java.awt.Color(70, 86, 132));
+        panelRound9.setRoundBottomLeft(40);
+        panelRound9.setRoundTopRight(40);
+
+        jTextFieldBajar4.setEditable(false);
+        jTextFieldBajar4.setBackground(new java.awt.Color(70, 86, 132));
+        jTextFieldBajar4.setFont(new java.awt.Font("Open Sans", 0, 14)); // NOI18N
+        jTextFieldBajar4.setForeground(new java.awt.Color(255, 255, 255));
+        jTextFieldBajar4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextFieldBajar4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextFieldBajar4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldBajar4ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelRound9Layout = new javax.swing.GroupLayout(panelRound9);
+        panelRound9.setLayout(panelRound9Layout);
+        panelRound9Layout.setHorizontalGroup(
+            panelRound9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextFieldBajar4, javax.swing.GroupLayout.DEFAULT_SIZE, 356, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        panelRound9Layout.setVerticalGroup(
+            panelRound9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTextFieldBajar4, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        panelRound1.add(panelRound9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 380, 50));
+
+        panelRound10.setBackground(new java.awt.Color(92, 104, 137));
+        panelRound10.setRoundBottomLeft(30);
+        panelRound10.setRoundBottomRight(30);
+        panelRound10.setRoundTopLeft(30);
+        panelRound10.setRoundTopRight(30);
+
+        jLabel15.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 18)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel15.setText("Agregar comidas");
+        jLabel15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel15MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelRound10Layout = new javax.swing.GroupLayout(panelRound10);
+        panelRound10.setLayout(panelRound10Layout);
+        panelRound10Layout.setHorizontalGroup(
+            panelRound10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound10Layout.createSequentialGroup()
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 3, Short.MAX_VALUE))
+        );
+        panelRound10Layout.setVerticalGroup(
+            panelRound10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound10Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        panelRound1.add(panelRound10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 170, 40));
+
+        jLabel8.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 24)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel8.setText("OTROS");
+        panelRound1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
+
+        jLabel9.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("DESAYUNO");
+        panelRound1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, 30));
+
+        jLabel10.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("ALMUERZO");
+        panelRound1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel11.setText("MERIENDA");
+        panelRound1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, -1, -1));
+        panelRound1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 420, 10));
+        panelRound1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 420, 10));
+        panelRound1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 420, 10));
+        panelRound1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 420, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE)
+            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
         );
 
         pack();
@@ -177,6 +372,47 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
         System.exit(0);
     }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+
+        Persona_Interfaz_Inicio ventanaLogin = new Persona_Interfaz_Inicio();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
+        ventanaLogin.setVisible(true);
+
+        // Cierra la ventana actual
+        this.dispose();
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jTextFieldBajarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBajarActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jTextFieldBajarActionPerformed
+
+    private void jTextFieldBajar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBajar1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldBajar1ActionPerformed
+
+    private void jTextFieldBajar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBajar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldBajar2ActionPerformed
+
+    private void jTextFieldBajar3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBajar3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldBajar3ActionPerformed
+
+    private void jTextFieldBajar4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldBajar4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldBajar4ActionPerformed
+
+    private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
+
+        Miscomidas ventanaLogin = new Miscomidas();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
+        ventanaLogin.setVisible(true);
+
+        // Cierra la ventana actual
+        this.dispose();
+
+
+    }//GEN-LAST:event_jLabel15MouseClicked
 
     /**
      * @param args the command line arguments
@@ -214,17 +450,30 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JTextField jTextFieldBajar;
+    private javax.swing.JTextField jTextFieldBajar1;
+    private javax.swing.JTextField jTextFieldBajar2;
+    private javax.swing.JTextField jTextFieldBajar3;
+    private javax.swing.JTextField jTextFieldBajar4;
     private proyecto_final.PanelRound panelRound1;
+    private proyecto_final.PanelRound panelRound10;
     private proyecto_final.PanelRound panelRound2;
-    private proyecto_final.PanelRound panelRound6;
-    private proyecto_final.PanelRound panelRound7;
+    private proyecto_final.PanelRound panelRound3;
+    private proyecto_final.PanelRound panelRound4;
+    private proyecto_final.PanelRound panelRound5;
+    private proyecto_final.PanelRound panelRound8;
+    private proyecto_final.PanelRound panelRound9;
     // End of variables declaration//GEN-END:variables
 }

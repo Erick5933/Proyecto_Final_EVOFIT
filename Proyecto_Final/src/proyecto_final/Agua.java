@@ -20,6 +20,8 @@ public class Agua extends javax.swing.JFrame {
     private int cantidadAgua; // Variable para almacenar la cantidad de agua
     private JLabel imagenAguaLabel; // Etiqueta para mostrar la imagen del agua
     private JLabel cantidadLabel;
+    private int contadorImagenes = 0;
+    private int[] limitesImagenes = {0, 1000, 2000, 3000, 4000};
 
     /**
      * Creates new form Agua
@@ -29,15 +31,12 @@ public class Agua extends javax.swing.JFrame {
         initCustomComponents();
         this.setLocationRelativeTo(null);
 
-        
-        
         cantidadAgua = 0;
-        
-        jLabel4.setText("Cantidad de agua: " + cantidadAgua + "%");
 
-        cantidadLabel = new JLabel("Cantidad de agua: " + cantidadAgua + "%");
+        jLabel4.setText(cantidadAgua + " " + "ml");
+
+        cantidadLabel = new JLabel(cantidadAgua + " " + "ml");
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -56,7 +55,9 @@ public class Agua extends javax.swing.JFrame {
         panelRound1 = new proyecto_final.PanelRound();
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         panelRound3 = new proyecto_final.PanelRound();
+        jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -74,7 +75,7 @@ public class Agua extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 440, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 420, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/menos.png"))); // NOI18N
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -82,7 +83,7 @@ public class Agua extends javax.swing.JFrame {
                 jLabel3MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 440, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, -1, -1));
 
         panelRound2.setBackground(new java.awt.Color(255, 255, 255));
         panelRound2.setRoundBottomLeft(20);
@@ -122,6 +123,7 @@ public class Agua extends javax.swing.JFrame {
         panelRound1.setRoundBottomRight(20);
         panelRound1.setRoundTopLeft(20);
         panelRound1.setRoundTopRight(20);
+        panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/boton.png"))); // NOI18N
@@ -130,33 +132,21 @@ public class Agua extends javax.swing.JFrame {
                 jLabel6MouseClicked(evt);
             }
         });
+        panelRound1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, 30, 30));
 
         jLabel2.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("AGUA");
+        panelRound1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 560, 30));
 
-        javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
-        panelRound1.setLayout(panelRound1Layout);
-        panelRound1Layout.setHorizontalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 560, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1))
-        );
-        panelRound1Layout.setVerticalGroup(
-            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(panelRound1Layout.createSequentialGroup()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/atras_32px.png"))); // NOI18N
+        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel18MouseClicked(evt);
+            }
+        });
+        panelRound1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 50, 50));
 
         jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 50));
 
@@ -178,7 +168,16 @@ public class Agua extends javax.swing.JFrame {
 
         jPanel1.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 580, 340));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 3, 640, 530));
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/guardar-el-archivo.png"))); // NOI18N
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 500, 240, 80));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 640, 580));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -193,7 +192,7 @@ public class Agua extends javax.swing.JFrame {
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         JLabel incrementarLabel = new JLabel("Incrementar");
-        cantidadAgua = Math.min(cantidadAgua + 25, 100); // Aumentar en incrementos de 25%, hasta un máximo de 100%
+        cantidadAgua = Math.min(cantidadAgua + 100, 4000); // Aumentar en incrementos de 25%, hasta un máximo de 100%
         actualizarInterfaz();
 
 
@@ -201,16 +200,30 @@ public class Agua extends javax.swing.JFrame {
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         JLabel decrementarLabel = new JLabel("Decrementar");
-        cantidadAgua = Math.max(cantidadAgua - 25, 0); // Disminuir en decrementos de 25%, hasta un mínimo de 0%
+        cantidadAgua = Math.max(cantidadAgua - 100, 0); // Disminuir en decrementos de 25%, hasta un mínimo de 0%
         actualizarInterfaz();
 
 
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
-        
+
 
     }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+    actualizarInterfaz();
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        // TODO add your handling code here:
+
+        Persona_Interfaz_Inicio ventanaLogin = new Persona_Interfaz_Inicio();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
+        ventanaLogin.setVisible(true);
+
+        // Cierra la ventana actual
+        this.dispose();
+    }//GEN-LAST:event_jLabel18MouseClicked
 
     /**
      * @param args the command line arguments
@@ -249,10 +262,23 @@ public class Agua extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private proyecto_final.PanelRound panelRound1;
@@ -275,12 +301,16 @@ public class Agua extends javax.swing.JFrame {
 
     private void actualizarInterfaz() {
 
-         jLabel4.setText("Cantidad de agua: " + cantidadAgua + "%");
-    
+        jLabel4.setText(cantidadAgua + " ml");
+
     // Actualizar la imagen del agua
-    String nombreImagen = cantidadAgua + "%.png";
-    ImageIcon nuevaImagen = cargarImagen("proyecto_final/Imagenes/" + nombreImagen);
-    imagenAguaLabel.setIcon(nuevaImagen);
+    int porcentaje = (int) ((double) cantidadAgua / 4000 * 100);
+    int indiceImagen = porcentaje / 25;
+
+    if (indiceImagen != contadorImagenes) {
+        contadorImagenes = indiceImagen;
+        cambiarImagen();
+    }
     }
 
     private void aumentarAgua() {
@@ -291,7 +321,13 @@ public class Agua extends javax.swing.JFrame {
 
     private void disminuirAgua() {
         // Lógica para disminuir la cantidad de agua
-actualizarInterfaz();
+        actualizarInterfaz();
     }
-    
-}
+
+    private void cambiarImagen() {
+    String nombreImagen = contadorImagenes * 25 + "%";
+    ImageIcon nuevaImagen = cargarImagen("proyecto_final/Imagenes/" + nombreImagen + ".png");
+    imagenAguaLabel.setIcon(nuevaImagen);
+}    }
+
+

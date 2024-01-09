@@ -5,6 +5,8 @@
  */
 package proyecto_final;
 
+import java.util.ArrayList;
+import proyecto_final.Clases.Comidas_Clase;
 import proyecto_final.Clases.noticias;
 
 /**
@@ -12,6 +14,9 @@ import proyecto_final.Clases.noticias;
  * @author Erick
  */
 public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
+    
+    public static ArrayList<Comidas_Clase> listaComida=new ArrayList<>();
+    
 
     /**
      * Creates new form Admin_Interfaz_Inicio
@@ -138,7 +143,11 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_bot_comidaActionPerformed
 
     private void bot_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_usuarioActionPerformed
-        // TODO add your handling code here:
+            AdminUsuario newFrame = new AdminUsuario();
+             newFrame.setVisible(true);
+             this.dispose();
+             newFrame.setLocationRelativeTo(null);
+
     }//GEN-LAST:event_bot_usuarioActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked

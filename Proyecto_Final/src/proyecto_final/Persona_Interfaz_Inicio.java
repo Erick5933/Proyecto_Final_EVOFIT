@@ -62,11 +62,10 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound7 = new proyecto_final.PanelRound();
         jLabel5 = new javax.swing.JLabel();
         panelRound8 = new proyecto_final.PanelRound();
-        jLabel7 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
         panelRound13 = new proyecto_final.PanelRound();
-        jLabel20 = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
         panelRound9 = new proyecto_final.PanelRound();
         jLabel10 = new javax.swing.JLabel();
         panelRound10 = new proyecto_final.PanelRound();
@@ -204,13 +203,14 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         });
         panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1486348819-back-backwards-repeat-arrows-arrow-blue_80473.png"))); // NOI18N
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel26.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/objetivoo.png"))); // NOI18N
         jLabel26.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel26MouseClicked(evt);
             }
         });
-        panelRound2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
+        panelRound2.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 80));
 
         panelRound5.setBackground(new java.awt.Color(71, 71, 132));
         panelRound5.setPreferredSize(new java.awt.Dimension(100, 80));
@@ -221,13 +221,13 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/lastic_bottle_icon_251304.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/botella_agua.png"))); // NOI18N
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
             }
         });
-        panelRound5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 100, -1));
+        panelRound5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 80));
 
         panelRound7.setBackground(new java.awt.Color(71, 71, 132));
         panelRound7.setPreferredSize(new java.awt.Dimension(100, 80));
@@ -238,7 +238,7 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/moon_icon-icons.com_62253.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/luna.png"))); // NOI18N
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
@@ -259,10 +259,6 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         });
         panelRound8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1455739720_Kitchen_Bold_Line_Color_Mix-28_icon-icons.com_53404.png"))); // NOI18N
-        jLabel7.setText("ALIMENTOS");
-        panelRound8.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -30, 70, 110));
-
         jLabel17.setBackground(new java.awt.Color(102, 153, 0));
         jLabel17.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 24)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
@@ -277,15 +273,15 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound13.setRoundTopRight(20);
         panelRound13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1455739720_Kitchen_Bold_Line_Color_Mix-28_icon-icons.com_53404.png"))); // NOI18N
-        jLabel20.setText("ALIMENTOS");
-        panelRound13.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -20, 70, 100));
-
         jLabel25.setBackground(new java.awt.Color(102, 153, 0));
         jLabel25.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 24)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(255, 255, 255));
         jLabel25.setText("ALIMENTOS");
         panelRound13.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/comida.png"))); // NOI18N
+        jLabel7.setText("ALIMENTOS");
+        panelRound13.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, -10, 70, 80));
 
         panelRound8.add(panelRound13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -298,6 +294,11 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound9.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/accessories-calculator-icon_37717.png"))); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
         panelRound9.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 70, -1));
 
         panelRound10.setBackground(new java.awt.Color(71, 71, 132));
@@ -309,6 +310,11 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound10.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/newspaper_icon-icons.com_57398.png"))); // NOI18N
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
         panelRound10.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         panelRound11.setBackground(new java.awt.Color(71, 71, 132));
@@ -320,6 +326,11 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/person_paper_id_card_profile_user_icon_131800.png"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
         panelRound11.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         javax.swing.GroupLayout panelRound4Layout = new javax.swing.GroupLayout(panelRound4);
@@ -626,13 +637,12 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         Agua newFrame = new Agua();
         newFrame.setVisible(true);
         this.dispose();
-        newFrame.setLocationRelativeTo(null);        // TODO add your handling code here:
     }//GEN-LAST:event_panelRound2MouseClicked
 
     private void jLabel26MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel26MouseClicked
         // TODO add your handling code here:
 
-        Login noti = new Login();
+        Objetivo noti = new Objetivo();
         noti.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel26MouseClicked
@@ -659,6 +669,33 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         this.dispose();
         
     }//GEN-LAST:event_panelRound8MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        // TODO add your handling code here:
+        
+           Calculadora noti = new Calculadora();
+        noti.setVisible(true);
+        this.dispose();
+        
+        
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        // TODO add your handling code here:
+        
+        
+            Noticias noti = new Noticias();
+        noti.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+AdminUsuario newFrame = new AdminUsuario();
+             newFrame.setVisible(true);
+             this.dispose();
+             newFrame.setLocationRelativeTo(null);           
+    }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
      * @param args the command line arguments
@@ -708,7 +745,6 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
