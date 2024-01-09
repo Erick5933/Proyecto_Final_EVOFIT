@@ -5,6 +5,8 @@
  */
 package proyecto_final;
 
+import java.util.ArrayList;
+import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -12,6 +14,8 @@ import javax.swing.table.DefaultTableModel;
  * @author Wendy LLivichuzhca
  */
 public class Comidas extends javax.swing.JFrame {
+    
+    public static ArrayList<Ingresar_Comida> Lista_Ingreso = new ArrayList<>();
 
     /**
      * Creates new form Noticias
@@ -21,16 +25,7 @@ public class Comidas extends javax.swing.JFrame {
         this.setLocationRelativeTo(this);
     }
 
-    DefaultTableModel modelo = new DefaultTableModel();
-
-    public void llenarTabla() {
-
-        modelo.setColumnIdentifiers(new String[]{"Codigo", "Nombre"});
-
-        modelo.setRowCount(0);
-
-        Registro.setModel(modelo);
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -49,7 +44,7 @@ public class Comidas extends javax.swing.JFrame {
         panelRound6 = new proyecto_final.PanelRound();
         panelRound7 = new proyecto_final.PanelRound();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        Ingresar_Comida = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Registro = new javax.swing.JTable();
@@ -67,6 +62,8 @@ public class Comidas extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(84, 71, 132));
+        jPanel1.setAlignmentX(0.5F);
+        jPanel1.setAlignmentY(0.5F);
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/boton.png"))); // NOI18N
@@ -153,8 +150,13 @@ public class Comidas extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
+        Ingresar_Comida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Ingresar_Comida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
+        Ingresar_Comida.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Ingresar_ComidaMouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/exit_delete_17889.png"))); // NOI18N
 
@@ -191,7 +193,7 @@ public class Comidas extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRound5Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                        .addComponent(Ingresar_Comida)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6))
                     .addGroup(panelRound5Layout.createSequentialGroup()
@@ -212,7 +214,7 @@ public class Comidas extends javax.swing.JFrame {
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelRound5Layout.createSequentialGroup()
                         .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
+                            .addComponent(Ingresar_Comida)
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -242,8 +244,17 @@ public class Comidas extends javax.swing.JFrame {
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // TODO add your handling code here:
-        llenarTabla();
     }//GEN-LAST:event_formWindowActivated
+
+    private void Ingresar_ComidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ingresar_ComidaMouseClicked
+        // TODO add your handling code here:
+
+        Ingresar_Comida ventanaIngreso = new Ingresar_Comida();
+        ventanaIngreso.setSize(700, 400);
+        ventanaIngreso.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        ventanaIngreso.setVisible(true);
+
+    }//GEN-LAST:event_Ingresar_ComidaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -286,12 +297,12 @@ public class Comidas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Ingresar_Comida;
     private javax.swing.JTable Registro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
