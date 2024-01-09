@@ -7,6 +7,7 @@ package proyecto_final;
 
 import java.util.ArrayList;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import proyecto_final.Clases.Comidas_Clase;
 
@@ -15,6 +16,8 @@ import proyecto_final.Clases.Comidas_Clase;
  * @author Wendy LLivichuzhca
  */
 public class Comidas extends javax.swing.JFrame {
+
+    public static ArrayList<Comidas_Clase> Lista_Ingreso = new ArrayList<>();
 
     DefaultTableModel modelo = new DefaultTableModel();
 
@@ -65,11 +68,16 @@ public class Comidas extends javax.swing.JFrame {
         panelRound4 = new proyecto_final.PanelRound();
         panelRound5 = new proyecto_final.PanelRound();
         Ingresar_Comida = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        Eliminar = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Registro = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        Modificar = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        panelRound1 = new proyecto_final.PanelRound();
+        jLabel5 = new javax.swing.JLabel();
+        panelRound2 = new proyecto_final.PanelRound();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -137,7 +145,12 @@ public class Comidas extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/exit_delete_17889.png"))); // NOI18N
+        Eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/exit_delete_17889.png"))); // NOI18N
+        Eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EliminarMouseClicked(evt);
+            }
+        });
 
         Registro.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -156,29 +169,89 @@ public class Comidas extends javax.swing.JFrame {
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/egg_bacon_dish_plate_food_icon_207982.png"))); // NOI18N
 
+        Modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/edit_modify_icon_196940.png"))); // NOI18N
+        Modificar.setToolTipText("");
+        Modificar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                ModificarMouseClicked(evt);
+            }
+        });
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/dish_87586.png"))); // NOI18N
+
+        panelRound1.setBackground(new java.awt.Color(238, 163, 193));
+        panelRound1.setRoundBottomRight(40);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/buscar_morado.png"))); // NOI18N
+
+        javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
+        panelRound1.setLayout(panelRound1Layout);
+        panelRound1Layout.setHorizontalGroup(
+            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addContainerGap())
+        );
+        panelRound1Layout.setVerticalGroup(
+            panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound1Layout.createSequentialGroup()
+                .addComponent(jLabel5)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        panelRound2.setBackground(new java.awt.Color(238, 163, 193));
+        panelRound2.setRoundTopLeft(40);
+
+        javax.swing.GroupLayout panelRound2Layout = new javax.swing.GroupLayout(panelRound2);
+        panelRound2.setLayout(panelRound2Layout);
+        panelRound2Layout.setHorizontalGroup(
+            panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 181, Short.MAX_VALUE)
+        );
+        panelRound2Layout.setVerticalGroup(
+            panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout panelRound5Layout = new javax.swing.GroupLayout(panelRound5);
         panelRound5.setLayout(panelRound5Layout);
         panelRound5Layout.setHorizontalGroup(
             panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound5Layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRound5Layout.createSequentialGroup()
-                        .addComponent(Ingresar_Comida)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel6))
+                        .addGap(53, 53, 53)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelRound5Layout.createSequentialGroup()
+                                .addComponent(Eliminar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel7))
+                            .addGroup(panelRound5Layout.createSequentialGroup()
+                                .addComponent(Modificar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel4))
+                            .addGroup(panelRound5Layout.createSequentialGroup()
+                                .addComponent(Ingresar_Comida)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel6))))
                     .addGroup(panelRound5Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7)))
-                .addGap(24, 114, Short.MAX_VALUE))
+                        .addGap(565, 565, 565)
+                        .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(46, 46, Short.MAX_VALUE))
         );
         panelRound5Layout.setVerticalGroup(
             panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound5Layout.createSequentialGroup()
-                .addGap(74, 74, 74)
+                .addGap(20, 20, 20)
+                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelRound2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(33, 33, 33)
                 .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelRound5Layout.createSequentialGroup()
@@ -187,9 +260,13 @@ public class Comidas extends javax.swing.JFrame {
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel7))))
-                .addContainerGap(96, Short.MAX_VALUE))
+                            .addComponent(Eliminar)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Modificar)
+                            .addComponent(jLabel4))))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
         jPanel1.add(panelRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 830, 420));
@@ -224,6 +301,20 @@ public class Comidas extends javax.swing.JFrame {
         this.dispose();
 
     }//GEN-LAST:event_Ingresar_ComidaMouseClicked
+
+    private void EliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EliminarMouseClicked
+        // TODO add your handling code here:
+        String codigoeliminar = JOptionPane.showInputDialog("Digite el codigo para eliminar");
+        Eliminar_Comida(codigoeliminar);
+        Registro.setModel(modelo);
+        MostrarDatos();
+    }//GEN-LAST:event_EliminarMouseClicked
+
+    private void ModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseClicked
+        // TODO add your handling code here:
+
+
+    }//GEN-LAST:event_ModificarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -266,16 +357,38 @@ public class Comidas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Eliminar;
     private javax.swing.JLabel Ingresar_Comida;
+    private javax.swing.JLabel Modificar;
     private javax.swing.JTable Registro;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private proyecto_final.PanelRound panelRound1;
+    private proyecto_final.PanelRound panelRound2;
     private proyecto_final.PanelRound panelRound4;
     private proyecto_final.PanelRound panelRound5;
     // End of variables declaration//GEN-END:variables
+
+    public void Eliminar_Comida(String codigoeliminar) {
+        boolean nacioencontrada = false;
+        for (int i = 0; i < Admin_Interfaz_Inicio.listaComida.size(); i++) {
+            if (Admin_Interfaz_Inicio.listaComida.get(i).getCodigo().equals(codigoeliminar)) {
+                Admin_Interfaz_Inicio.listaComida.remove(i);
+                nacioencontrada = true;
+                JOptionPane.showMessageDialog(null, "Eliminado correctamente");
+                break; // Terminar el bucle una vez que se haya eliminado el estudiante
+            }
+        }
+
+        if (!nacioencontrada) {
+            JOptionPane.showMessageDialog(null, "El codigo no se encuentra en el sistema");
+        }
+    }
+
 }

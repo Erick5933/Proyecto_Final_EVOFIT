@@ -27,7 +27,7 @@ public class Registro extends javax.swing.JFrame {
         this.setResizable(false);
         //this.setUndecorated(true);
 
-        Edad.getEditor().getComponent(0).setForeground(Color.WHITE);
+        Edad.getEditor().getComponent(0).setForeground(Color.BLACK);
         Edad.getEditor().getComponent(0).setBackground(new Color(70, 86, 132));
 
         TextPrompt nombre = new TextPrompt("Ingrese nombre completo", Nombre);

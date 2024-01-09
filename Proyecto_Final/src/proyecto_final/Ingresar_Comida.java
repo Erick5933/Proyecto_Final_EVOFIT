@@ -120,7 +120,6 @@ public class Ingresar_Comida extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Tamaño de la porcion:");
 
-        Codigo.setEditable(false);
         Codigo.setBackground(new java.awt.Color(70, 86, 132));
         Codigo.setForeground(new java.awt.Color(255, 255, 255));
         Codigo.setBorder(null);
@@ -248,7 +247,7 @@ public class Ingresar_Comida extends javax.swing.JFrame {
                     .addGroup(panelRound1Layout.createSequentialGroup()
                         .addGap(251, 251, 251)
                         .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         panelRound1Layout.setVerticalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
