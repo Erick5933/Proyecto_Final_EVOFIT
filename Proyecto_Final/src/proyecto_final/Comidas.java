@@ -5,13 +5,18 @@
  */
 package proyecto_final;
 
+import java.util.ArrayList;
+import javax.swing.JFrame;
 import javax.swing.table.DefaultTableModel;
+import proyecto_final.Clases.Comidas_Clase;
 
 /**
  *
  * @author Wendy LLivichuzhca
  */
 public class Comidas extends javax.swing.JFrame {
+
+    DefaultTableModel modelo = new DefaultTableModel();
 
     /**
      * Creates new form Noticias
@@ -21,15 +26,28 @@ public class Comidas extends javax.swing.JFrame {
         this.setLocationRelativeTo(this);
     }
 
-    DefaultTableModel modelo = new DefaultTableModel();
+    public void MostrarDatos() {
 
-    public void llenarTabla() {
-
-        modelo.setColumnIdentifiers(new String[]{"Codigo", "Nombre"});
+        modelo.setColumnIdentifiers(new String[]{"Codigo", "Nombre", "Tipo", "Proteinas", "Carbohidratos", "Calorias", "Porcion"});
 
         modelo.setRowCount(0);
 
+        for (Comidas_Clase micomida : Admin_Interfaz_Inicio.listaComida) {
+            Object[] datos = new Object[11];
+
+            datos[0] = micomida.getCodigo();
+            datos[1] = micomida.getNombre();
+            datos[2] = micomida.getTipo();
+            datos[3] = micomida.getCantidad_Proteico();
+            datos[4] = micomida.getCantidad_Carbodidratos();
+            datos[5] = micomida.getCantidad_Calorías();
+            datos[6] = micomida.getTamaño_Porción();
+
+            modelo.addRow(datos);
+        }
+
         Registro.setModel(modelo);
+
     }
 
     /**
@@ -46,10 +64,7 @@ public class Comidas extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         panelRound4 = new proyecto_final.PanelRound();
         panelRound5 = new proyecto_final.PanelRound();
-        panelRound6 = new proyecto_final.PanelRound();
-        panelRound7 = new proyecto_final.PanelRound();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        Ingresar_Comida = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Registro = new javax.swing.JTable();
@@ -114,47 +129,13 @@ public class Comidas extends javax.swing.JFrame {
         panelRound5.setRoundTopLeft(30);
         panelRound5.setRoundTopRight(30);
 
-        panelRound6.setBackground(new java.awt.Color(238, 163, 193));
-        panelRound6.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        panelRound6.setRoundTopLeft(40);
-        panelRound6.setVerifyInputWhenFocusTarget(false);
-
-        javax.swing.GroupLayout panelRound6Layout = new javax.swing.GroupLayout(panelRound6);
-        panelRound6.setLayout(panelRound6Layout);
-        panelRound6Layout.setHorizontalGroup(
-            panelRound6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 203, Short.MAX_VALUE)
-        );
-        panelRound6Layout.setVerticalGroup(
-            panelRound6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        panelRound7.setBackground(new java.awt.Color(238, 163, 193));
-        panelRound7.setBorder(javax.swing.BorderFactory.createCompoundBorder());
-        panelRound7.setRoundBottomRight(40);
-
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1490793870-user-interface25_82355.png"))); // NOI18N
-
-        javax.swing.GroupLayout panelRound7Layout = new javax.swing.GroupLayout(panelRound7);
-        panelRound7.setLayout(panelRound7Layout);
-        panelRound7Layout.setHorizontalGroup(
-            panelRound7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panelRound7Layout.setVerticalGroup(
-            panelRound7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound7Layout.createSequentialGroup()
-                .addComponent(jLabel4)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
+        Ingresar_Comida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Ingresar_Comida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
+        Ingresar_Comida.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Ingresar_ComidaMouseClicked(evt);
+            }
+        });
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/exit_delete_17889.png"))); // NOI18N
 
@@ -180,18 +161,12 @@ public class Comidas extends javax.swing.JFrame {
         panelRound5Layout.setHorizontalGroup(
             panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(panelRound6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(panelRound7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound5Layout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRound5Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                        .addComponent(Ingresar_Comida)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel6))
                     .addGroup(panelRound5Layout.createSequentialGroup()
@@ -203,22 +178,18 @@ public class Comidas extends javax.swing.JFrame {
         panelRound5Layout.setVerticalGroup(
             panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound5Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelRound6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelRound7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(54, 54, 54)
+                .addGap(74, 74, 74)
                 .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelRound5Layout.createSequentialGroup()
                         .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5)
+                            .addComponent(Ingresar_Comida)
                             .addComponent(jLabel6))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel2)
                             .addComponent(jLabel7))))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         jPanel1.add(panelRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 830, 420));
@@ -242,8 +213,17 @@ public class Comidas extends javax.swing.JFrame {
 
     private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
         // TODO add your handling code here:
-        llenarTabla();
+        MostrarDatos();
     }//GEN-LAST:event_formWindowActivated
+
+    private void Ingresar_ComidaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ingresar_ComidaMouseClicked
+        // TODO add your handling code here:
+
+        Ingresar_Comida ventanaIngreso = new Ingresar_Comida();
+        ventanaIngreso.setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_Ingresar_ComidaMouseClicked
 
     /**
      * @param args the command line arguments
@@ -286,19 +266,16 @@ public class Comidas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Ingresar_Comida;
     private javax.swing.JTable Registro;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private proyecto_final.PanelRound panelRound4;
     private proyecto_final.PanelRound panelRound5;
-    private proyecto_final.PanelRound panelRound6;
-    private proyecto_final.PanelRound panelRound7;
     // End of variables declaration//GEN-END:variables
 }

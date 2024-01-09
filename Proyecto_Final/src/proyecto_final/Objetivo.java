@@ -23,13 +23,12 @@ public class Objetivo extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
 
     }
-    
 
-     double peso;
-     double altura;
-     int edad;
-     String genero;
-     String factorActividad;
+    double peso;
+    double altura;
+    int edad;
+    String genero;
+    String factorActividad;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -290,51 +289,104 @@ public class Objetivo extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jLabel15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel15MouseClicked
-    // Bajar de peso
-    Clase_Registrarse nuevoRegistro = Clase_Registrarse.obtenerInstanciaDeUsuario();
 
-    if (nuevoRegistro != null) {
-        double requerimientoCalorico = Clase_Registrarse.calcularRequerimientoCalorico(
-            nuevoRegistro.getPeso(), nuevoRegistro.getAltura(), nuevoRegistro.getEdad(),
-            nuevoRegistro.getGenero(), nuevoRegistro.getActividad());
+        // Bajar de peso
+        Clase_Registrarse nuevoRegistro = Clase_Registrarse.obtenerInstanciaDeUsuario();
 
-        double caloriasObjetivo = Clase_Registrarse.calcularCaloriasBajarPeso(requerimientoCalorico);
+        if (nuevoRegistro != null) {
+            double requerimientoCalorico = Clase_Registrarse.calcularRequerimientoCalorico(
+                    nuevoRegistro.getPeso(), nuevoRegistro.getAltura(), nuevoRegistro.getEdad(),
+                    nuevoRegistro.getGenero(), nuevoRegistro.getActividad());
 
-        JOptionPane.showMessageDialog(this, "Calorías para bajar de peso: " + caloriasObjetivo + " kcal", "Advertencia", JOptionPane.WARNING_MESSAGE);
-    } else {
-        // Manejar la situación en la que no se pudo obtener la instancia de Clase_Registrarse
-        JOptionPane.showMessageDialog(this, "Error al obtener la información del usuario.", "Error", JOptionPane.ERROR_MESSAGE);
-    }
+            double caloriasObjetivo = Clase_Registrarse.calcularCaloriasBajarPeso(requerimientoCalorico);
+
+            JOptionPane.showMessageDialog(this, "Calorías para bajar de peso: " + caloriasObjetivo + " kcal", "Advertencia", JOptionPane.WARNING_MESSAGE);
+        } else {
+            // Manejar la situación en la que no se pudo obtener la instancia de Clase_Registrarse
+            JOptionPane.showMessageDialog(this, "Error al obtener la información del usuario.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jLabel15MouseClicked
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
-        // TODO add your handling code here:
 
         // ganer musculo
+        Clase_Registrarse nuevoRegistro = Clase_Registrarse.obtenerInstanciaDeUsuario();
+
+        if (nuevoRegistro != null) {
+            double requerimientoCalorico = Clase_Registrarse.calcularRequerimientoCalorico(
+                    nuevoRegistro.getPeso(), nuevoRegistro.getAltura(), nuevoRegistro.getEdad(),
+                    nuevoRegistro.getGenero(), nuevoRegistro.getActividad());
+
+            double caloriasObjetivo = Clase_Registrarse.calcularCaloriasGanarMusculo(requerimientoCalorico);
+
+            JOptionPane.showMessageDialog(this, "Calorías para Ganar Musculo: " + caloriasObjetivo + " kcal", "Advertencia", JOptionPane.WARNING_MESSAGE);
+        } else {
+            // Manejar la situación en la que no se pudo obtener la instancia de Clase_Registrarse
+            JOptionPane.showMessageDialog(this, "Error al obtener la información del usuario.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
-        // TODO add your handling code here:
 
         //subir de peso
+        Clase_Registrarse nuevoRegistro = Clase_Registrarse.obtenerInstanciaDeUsuario();
+
+        if (nuevoRegistro != null) {
+            double requerimientoCalorico = Clase_Registrarse.calcularRequerimientoCalorico(
+                    nuevoRegistro.getPeso(), nuevoRegistro.getAltura(), nuevoRegistro.getEdad(),
+                    nuevoRegistro.getGenero(), nuevoRegistro.getActividad());
+
+            double caloriasObjetivo = Clase_Registrarse.calcularCaloriasSubirPeso(requerimientoCalorico);
+
+            JOptionPane.showMessageDialog(this, "Calorías para subir de peso: " + caloriasObjetivo + " kcal", "Advertencia", JOptionPane.WARNING_MESSAGE);
+        } else {
+            // Manejar la situación en la que no se pudo obtener la instancia de Clase_Registrarse
+            JOptionPane.showMessageDialog(this, "Error al obtener la información del usuario.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
 
     }//GEN-LAST:event_jLabel18MouseClicked
 
     private void jLabel19MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel19MouseClicked
-        // TODO add your handling code here:
 
         //perder grasa
+        Clase_Registrarse nuevoRegistro = Clase_Registrarse.obtenerInstanciaDeUsuario();
+
+        if (nuevoRegistro != null) {
+            double requerimientoCalorico = Clase_Registrarse.calcularRequerimientoCalorico(
+                    nuevoRegistro.getPeso(), nuevoRegistro.getAltura(), nuevoRegistro.getEdad(),
+                    nuevoRegistro.getGenero(), nuevoRegistro.getActividad());
+
+            double caloriasObjetivo = Clase_Registrarse.calcularCaloriasPerderGrasa(requerimientoCalorico);
+
+            JOptionPane.showMessageDialog(this, "Calorías para perder grasa: " + caloriasObjetivo + " kcal", "Advertencia", JOptionPane.WARNING_MESSAGE);
+        } else {
+            // Manejar la situación en la que no se pudo obtener la instancia de Clase_Registrarse
+            JOptionPane.showMessageDialog(this, "Error al obtener la información del usuario.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
 
     }//GEN-LAST:event_jLabel19MouseClicked
 
     private void jLabel20MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel20MouseClicked
-        // TODO add your handling code here:
 
         //mantener peso
+        Clase_Registrarse nuevoRegistro = Clase_Registrarse.obtenerInstanciaDeUsuario();
+
+        if (nuevoRegistro != null) {
+            double requerimientoCalorico = Clase_Registrarse.calcularRequerimientoCalorico(
+                    nuevoRegistro.getPeso(), nuevoRegistro.getAltura(), nuevoRegistro.getEdad(),
+                    nuevoRegistro.getGenero(), nuevoRegistro.getActividad());
+
+            double caloriasObjetivo = Clase_Registrarse.calcularCaloriasMantenerPeso(requerimientoCalorico);
+
+            JOptionPane.showMessageDialog(this, "Calorías para mantener de peso: " + caloriasObjetivo + " kcal", "Advertencia", JOptionPane.WARNING_MESSAGE);
+        } else {
+            // Manejar la situación en la que no se pudo obtener la instancia de Clase_Registrarse
+            JOptionPane.showMessageDialog(this, "Error al obtener la información del usuario.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_jLabel20MouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        // TODO add your handling code here:
 
         Persona_Interfaz_Inicio ventanaLogin = new Persona_Interfaz_Inicio();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
         ventanaLogin.setVisible(true);
