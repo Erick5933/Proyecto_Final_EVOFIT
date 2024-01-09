@@ -23,7 +23,7 @@ import proyecto_final.Clases.Comidas_Clase;
  */
 public class Ingresar_Comida extends javax.swing.JFrame {
 
-    public static ArrayList<Comidas_Clase> Lista_Ingreso = new ArrayList<>();
+    
     DefaultTableModel modelo = new DefaultTableModel();
 
     /**
