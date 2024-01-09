@@ -6,6 +6,7 @@
 package proyecto_final;
 
 import java.awt.Color;
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.table.DefaultTableModel;
@@ -16,19 +17,42 @@ import proyecto_final.Clases.Clase_Registrarse;
  * @author KENNY
  */
 public class AdminUsuario extends javax.swing.JFrame {
-private final DefaultTableModel modelo;
+
+    private DefaultTableModel modelo;
+    public static ArrayList<Clase_Registrarse> Lista = Registro.Lista;
 
     /**
      * Creates new form AdminUsuario
      */
     public AdminUsuario() {
-        
-        initComponents();
-    modelo = (DefaultTableModel) jTable1.getModel();
 
-        
-       
-        
+        initComponents();
+        modelo = (DefaultTableModel) jTable1.getModel();
+        Lista = new ArrayList();
+
+    }
+
+    public void listar() {
+        modelo = (DefaultTableModel) jTable1.getModel();
+        Object[] ob = new Object[5];
+        for (int i = 0; i < Lista.size(); i++) {
+            ob[0] = Lista.get(i).getNombre();
+            ob[1] = Lista.get(i).getApellido();
+            ob[2] = Lista.get(i).getUsuario();
+            ob[3] = Lista.get(i).getEdad();
+            ob[4] = Lista.get(i).getGenero();
+
+            modelo.addRow(ob);
+        }
+        jTable1.setModel(modelo);
+    }
+
+    public void limpiarTabla() {
+        for (int i = 0; i < modelo.getRowCount(); i++) {
+            modelo.removeRow(i);
+            i = i - 1;
+
+        }
     }
 
     /**
@@ -169,7 +193,7 @@ private final DefaultTableModel modelo;
     }//GEN-LAST:event_jLabel6MouseClicked
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+limpiarTabla();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked

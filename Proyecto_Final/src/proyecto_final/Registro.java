@@ -620,6 +620,7 @@ public class Registro extends javax.swing.JFrame {
             nuevoRegistro.setGenero("Masculino");
         }
         
+        
 
         // Añadir el nuevo registro al ArrayList
         Lista.add(nuevoRegistro);

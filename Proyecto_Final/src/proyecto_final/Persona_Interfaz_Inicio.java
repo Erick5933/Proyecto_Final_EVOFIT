@@ -691,7 +691,10 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-           
+AdminUsuario newFrame = new AdminUsuario();
+             newFrame.setVisible(true);
+             this.dispose();
+             newFrame.setLocationRelativeTo(null);           
     }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
