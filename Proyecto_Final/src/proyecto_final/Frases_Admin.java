@@ -7,25 +7,23 @@ package proyecto_final;
 
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
+import proyecto_final.Clases.frases;
 import proyecto_final.Clases.noticias;
 
 /**
  *
  * @author GIGABYTE
  */
-public class Noticias_Admin extends javax.swing.JFrame {
-
-    private ArrayList<noticias> noticiasList = new ArrayList<>();
-    private noticias noticiaActual;
+public class Frases_Admin extends javax.swing.JFrame {
+private ArrayList<frases> listaFrases = new ArrayList<>();
 
     /**
-     * Creates new form Noticias_Admin
+     * Creates new form Frases_Admin
      */
-    public Noticias_Admin() {
+    public Frases_Admin() {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.setResizable(false);
-
+        // Inicializar la tabla
+        mostrarDatosEnTabla();
     }
 
     /**
@@ -44,39 +42,28 @@ public class Noticias_Admin extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         panelRound5 = new proyecto_final.PanelRound();
         panelRound3 = new proyecto_final.PanelRound();
-        jLabel1 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         panelRound6 = new proyecto_final.PanelRound();
         panelRound8 = new proyecto_final.PanelRound();
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
         txtcodigo = new javax.swing.JTextField();
-        txttitulo = new javax.swing.JTextField();
-        txtdescripcion = new javax.swing.JTextField();
-        txtautor = new javax.swing.JTextField();
-        txtcontenido = new javax.swing.JTextField();
+        txtfrase = new javax.swing.JTextField();
+        txtfraseautor = new javax.swing.JTextField();
         txtcategoria = new javax.swing.JTextField();
-        txtweb = new javax.swing.JTextField();
         btingresar = new javax.swing.JButton();
         btmodificar = new javax.swing.JButton();
         bteliminar = new javax.swing.JButton();
-        calendario = new com.toedter.calendar.JCalendar();
         btconsultar = new javax.swing.JButton();
-        jLabel18 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabladatos = new javax.swing.JTable();
         cerrar = new javax.swing.JLabel();
         botonregresar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
-        setResizable(false);
 
         panelRound1.setBackground(new java.awt.Color(84, 71, 132));
         panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -99,7 +86,7 @@ public class Noticias_Admin extends javax.swing.JFrame {
         jLabel10.setText("EVOFIT");
         panelRound2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
 
-        panelRound1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 350, 320));
+        panelRound1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 350, 320));
 
         panelRound5.setBackground(new java.awt.Color(70, 86, 132));
         panelRound5.setRoundBottomLeft(30);
@@ -116,7 +103,7 @@ public class Noticias_Admin extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setText("NOTICIAS");
+        jLabel8.setText("FRASES");
 
         javax.swing.GroupLayout panelRound3Layout = new javax.swing.GroupLayout(panelRound3);
         panelRound3.setLayout(panelRound3Layout);
@@ -125,16 +112,10 @@ public class Noticias_Admin extends javax.swing.JFrame {
             .addGroup(panelRound3Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(jLabel8)
-                .addGap(259, 259, 259)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 281, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
         panelRound3Layout.setVerticalGroup(
             panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound3Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel8)
@@ -183,22 +164,13 @@ public class Noticias_Admin extends javax.swing.JFrame {
         jLabel2.setText("Codigo Noticia:");
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel13.setText("Titulo:");
-
-        jLabel14.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel14.setText("Contenido:");
+        jLabel13.setText("Autor");
 
         jLabel15.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel15.setText("Categoria:");
 
-        jLabel16.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel16.setText("Web:");
-
-        jLabel17.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel17.setText("Autor:");
-
         jLabel19.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel19.setText("Descripcion:");
+        jLabel19.setText("Frase");
 
         txtcodigo.setBackground(new java.awt.Color(70, 86, 132));
         txtcodigo.setForeground(new java.awt.Color(255, 255, 255));
@@ -209,36 +181,17 @@ public class Noticias_Admin extends javax.swing.JFrame {
             }
         });
 
-        txttitulo.setBackground(new java.awt.Color(70, 86, 132));
-        txttitulo.setForeground(new java.awt.Color(255, 255, 255));
-        txttitulo.setBorder(null);
+        txtfrase.setBackground(new java.awt.Color(70, 86, 132));
+        txtfrase.setForeground(new java.awt.Color(255, 255, 255));
+        txtfrase.setBorder(null);
 
-        txtdescripcion.setBackground(new java.awt.Color(70, 86, 132));
-        txtdescripcion.setForeground(new java.awt.Color(255, 255, 255));
-        txtdescripcion.setBorder(null);
-
-        txtautor.setEditable(false);
-        txtautor.setBackground(new java.awt.Color(70, 86, 132));
-        txtautor.setForeground(new java.awt.Color(255, 255, 255));
-        txtautor.setText("jTextField1");
-        txtautor.setBorder(null);
-
-        txtcontenido.setBackground(new java.awt.Color(70, 86, 132));
-        txtcontenido.setForeground(new java.awt.Color(255, 255, 255));
-        txtcontenido.setBorder(null);
+        txtfraseautor.setBackground(new java.awt.Color(70, 86, 132));
+        txtfraseautor.setForeground(new java.awt.Color(255, 255, 255));
+        txtfraseautor.setBorder(null);
 
         txtcategoria.setBackground(new java.awt.Color(70, 86, 132));
         txtcategoria.setForeground(new java.awt.Color(255, 255, 255));
         txtcategoria.setBorder(null);
-
-        txtweb.setBackground(new java.awt.Color(70, 86, 132));
-        txtweb.setForeground(new java.awt.Color(255, 255, 255));
-        txtweb.setBorder(null);
-        txtweb.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtwebActionPerformed(evt);
-            }
-        });
 
         btingresar.setText("INGRESAR");
         btingresar.addActionListener(new java.awt.event.ActionListener() {
@@ -268,8 +221,18 @@ public class Noticias_Admin extends javax.swing.JFrame {
             }
         });
 
-        jLabel18.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel18.setText("Fecha De Publicacion:");
+        tabladatos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(tabladatos);
 
         javax.swing.GroupLayout panelRound5Layout = new javax.swing.GroupLayout(panelRound5);
         panelRound5.setLayout(panelRound5Layout);
@@ -283,15 +246,12 @@ public class Noticias_Admin extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(panelRound5Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel19))
+                        .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtdescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(panelRound5Layout.createSequentialGroup()
-                        .addComponent(txtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(370, 370, 370)
+                        .addGap(527, 527, 527)
                         .addComponent(panelRound8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelRound5Layout.createSequentialGroup()
                         .addComponent(btingresar)
@@ -307,33 +267,24 @@ public class Noticias_Admin extends javax.swing.JFrame {
                     .addGroup(panelRound5Layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel17)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel15)
+                            .addComponent(jLabel19))
+                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelRound5Layout.createSequentialGroup()
-                                .addGap(473, 473, 473)
-                                .addComponent(txtautor, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelRound5Layout.createSequentialGroup()
-                                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel13)
-                                    .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel14)
-                                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel16)
-                                            .addComponent(jLabel15))))
-                                .addGap(99, 99, 99)
-                                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtweb, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txttitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(79, 79, 79)
+                                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(txtcategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtcontenido, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                    .addComponent(txtfraseautor, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(panelRound5Layout.createSequentialGroup()
+                                .addGap(61, 61, 61)
+                                .addComponent(txtfrase, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(panelRound5Layout.createSequentialGroup()
                         .addGap(188, 188, 188)
-                        .addComponent(panelRound3, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelRound5Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel18))
-                    .addGroup(panelRound5Layout.createSequentialGroup()
-                        .addGap(235, 235, 235)
-                        .addComponent(calendario, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(panelRound3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(panelRound5Layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 733, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelRound5Layout.setVerticalGroup(
@@ -342,68 +293,39 @@ public class Noticias_Admin extends javax.swing.JFrame {
                 .addComponent(panelRound3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelRound5Layout.createSequentialGroup()
-                        .addGap(60, 60, 60)
-                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(panelRound6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(panelRound8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel2))
-                    .addGroup(panelRound5Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btingresar)
                             .addComponent(btmodificar)
                             .addComponent(bteliminar)
-                            .addComponent(btconsultar))
-                        .addGap(27, 27, 27)
-                        .addComponent(txtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel19)
-                            .addComponent(txtdescripcion, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btconsultar)))
+                    .addGroup(panelRound5Layout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(panelRound6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(panelRound8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtcodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(24, 24, 24)
+                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel19)
+                    .addComponent(txtfrase, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txttitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel13))
-                .addGap(18, 18, 18)
-                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(txtcontenido, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel13)
+                    .addComponent(txtfraseautor, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(64, 64, 64)
+                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel15)
                     .addComponent(txtcategoria, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(txtweb, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addComponent(jLabel18)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(calendario, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel17)
-                    .addComponent(txtautor, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(48, 48, 48)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(121, Short.MAX_VALUE))
         );
 
-        panelRound1.add(panelRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, 650, 640));
-
-        tabladatos.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {},
-                {},
-                {}
-            },
-            new String [] {
-
-            }
-        ));
-        jScrollPane1.setViewportView(tabladatos);
-
-        panelRound1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 350, 410));
+        panelRound1.add(panelRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 40, 650, 640));
 
         cerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/boton.png"))); // NOI18N
         cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -425,54 +347,103 @@ public class Noticias_Admin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelRound1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 18, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtcodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtcodigoActionPerformed
+
     private void btingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btingresarActionPerformed
         // TODO add your handling code here:
-        // Crear una nueva instancia de Noticia y agregarla al ArrayList
-        noticias nuevaNoticia = new noticias();
-        nuevaNoticia.setCod_not(txtcodigo.getText());
-        nuevaNoticia.setDescripcion(txtdescripcion.getText());
-        nuevaNoticia.setTitulo(txttitulo.getText());
-        nuevaNoticia.setContenido(txtcontenido.getText());
-        nuevaNoticia.setCategoria(txtcategoria.getText());
-        nuevaNoticia.setWeb(txtweb.getText());
-        nuevaNoticia.setAutor(txtautor.getText());
-        nuevaNoticia.setFechapu(calendario.getDate());
+        // Agregar una nueva frase a la lista
+        frases nuevaFrase = new frases();
+        nuevaFrase.setAutor(txtfraseautor.getText());
+        nuevaFrase.setTexto(txtfrase.getText());
+        nuevaFrase.setCod_frases(txtcodigo.getText());
+        nuevaFrase.setCategoria(txtcategoria.getText());
 
-        noticiasList.add(nuevaNoticia);
+        listaFrases.add(nuevaFrase);
+
+        // Limpiar los campos después de agregar
+        limpiarCampos();
 
         // Actualizar la tabla
-        actualizarTabla();
-
+        mostrarDatosEnTabla();
+       
     }//GEN-LAST:event_btingresarActionPerformed
 
     private void btmodificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmodificarActionPerformed
         // TODO add your handling code here:
-        // Verificar si hay una noticia seleccionada
-        if (noticiaActual != null) {
-            // Actualizar los campos de la noticia actual con los nuevos valores
-            noticiaActual.setDescripcion(txtdescripcion.getText());
-            noticiaActual.setTitulo(txttitulo.getText());
-            noticiaActual.setContenido(txtcontenido.getText());
-            noticiaActual.setCategoria(txtcategoria.getText());
-            noticiaActual.setWeb(txtweb.getText());
-            noticiaActual.setAutor(txtautor.getText());
-            noticiaActual.setFechapu(calendario.getDate());
+        // Obtener la fila seleccionada en la tabla
+        int filaSeleccionada = tabladatos.getSelectedRow();
+
+        if (filaSeleccionada != -1) {
+            // Modificar la frase en la lista
+            frases fraseSeleccionada = listaFrases.get(filaSeleccionada);
+            fraseSeleccionada.setAutor(txtfraseautor.getText());
+            fraseSeleccionada.setTexto(txtfrase.getText());
+            fraseSeleccionada.setCod_frases(txtcodigo.getText());
+            fraseSeleccionada.setCategoria(txtcategoria.getText());
+
+            // Limpiar los campos después de modificar
+            limpiarCampos();
+
             // Actualizar la tabla
-            actualizarTabla();
+            mostrarDatosEnTabla();
+        } else {
+            // Mostrar un mensaje indicando que no se ha seleccionado ninguna fila
         }
+       
+        
     }//GEN-LAST:event_btmodificarActionPerformed
+
+    private void bteliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bteliminarActionPerformed
+        // TODO add your handling code here:
+         // Obtener la fila seleccionada en la tabla
+        int filaSeleccionada = tabladatos.getSelectedRow();
+
+        if (filaSeleccionada != -1) {
+            // Eliminar la frase de la lista
+            listaFrases.remove(filaSeleccionada);
+
+            // Limpiar los campos después de eliminar
+            limpiarCampos();
+
+            // Actualizar la tabla
+            mostrarDatosEnTabla();
+        } else {
+            // Mostrar un mensaje indicando que no se ha seleccionado ninguna fila
+        }
+       
+    }//GEN-LAST:event_bteliminarActionPerformed
+
+    private void btconsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btconsultarActionPerformed
+        // TODO add your handling code here:
+         // Obtener la fila seleccionada en la tabla
+        int filaSeleccionada = tabladatos.getSelectedRow();
+
+        if (filaSeleccionada != -1) {
+            // Mostrar los datos de la frase seleccionada en los campos de texto
+            frases fraseSeleccionada = listaFrases.get(filaSeleccionada);
+            txtcodigo.setText(fraseSeleccionada.getCod_frases());
+            txtfrase.setText(fraseSeleccionada.getTexto());
+            txtfraseautor.setText(fraseSeleccionada.getAutor());
+            txtcategoria.setText(fraseSeleccionada.getCategoria());
+        } else {
+            // Mostrar un mensaje indicando que no se ha seleccionado ninguna fila
+        }
+       
+    }//GEN-LAST:event_btconsultarActionPerformed
 
     private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
         dispose();
@@ -483,47 +454,7 @@ public class Noticias_Admin extends javax.swing.JFrame {
         volvi.setVisible(true);
         this.dispose();
 
-
     }//GEN-LAST:event_botonregresarMouseClicked
-
-    private void txtwebActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtwebActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtwebActionPerformed
-
-    private void txtcodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodigoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtcodigoActionPerformed
-
-    private void bteliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bteliminarActionPerformed
-        // TODO add your handling code here:
-        // Verificar si hay una noticia seleccionada
-        if (noticiaActual != null) {
-            // Eliminar la noticia actual del ArrayList
-            noticiasList.remove(noticiaActual);
-
-            // Limpiar los campos
-            limpiarCampos();
-
-            // Actualizar la tabla
-            actualizarTabla();
-        }
-    }//GEN-LAST:event_bteliminarActionPerformed
-
-    private void btconsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btconsultarActionPerformed
-        // TODO add your handling code here:
-        // Verificar si hay una noticia seleccionada
-        if (noticiaActual != null) {
-            // Mostrar los datos de la noticia actual en los campos correspondientes
-            txtdescripcion.setText(noticiaActual.getDescripcion());
-            txttitulo.setText(noticiaActual.getTitulo());
-            txtcontenido.setText(noticiaActual.getContenido());
-            txtcategoria.setText(noticiaActual.getCategoria());
-            txtweb.setText(noticiaActual.getWeb());
-            txtautor.setText(noticiaActual.getAutor());
-            calendario.setDate(noticiaActual.getFechapu());
-        }
-
-    }//GEN-LAST:event_btconsultarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -539,28 +470,23 @@ public class Noticias_Admin extends javax.swing.JFrame {
                 if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
-
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Noticias_Admin.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frases_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Noticias_Admin.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frases_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Noticias_Admin.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frases_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Noticias_Admin.class
-                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Frases_Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Noticias_Admin().setVisible(true);
+                new Frases_Admin().setVisible(true);
             }
         });
     }
@@ -571,16 +497,10 @@ public class Noticias_Admin extends javax.swing.JFrame {
     private javax.swing.JButton bteliminar;
     private javax.swing.JButton btingresar;
     private javax.swing.JButton btmodificar;
-    private com.toedter.calendar.JCalendar calendario;
     private javax.swing.JLabel cerrar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -595,42 +515,38 @@ public class Noticias_Admin extends javax.swing.JFrame {
     private proyecto_final.PanelRound panelRound6;
     private proyecto_final.PanelRound panelRound8;
     private javax.swing.JTable tabladatos;
-    private javax.swing.JTextField txtautor;
     private javax.swing.JTextField txtcategoria;
     private javax.swing.JTextField txtcodigo;
-    private javax.swing.JTextField txtcontenido;
-    private javax.swing.JTextField txtdescripcion;
-    private javax.swing.JTextField txttitulo;
-    private javax.swing.JTextField txtweb;
+    private javax.swing.JTextField txtfrase;
+    private javax.swing.JTextField txtfraseautor;
     // End of variables declaration//GEN-END:variables
-
-    private void actualizarTabla() {
-        // Crear un modelo de tabla y asignarlo a la tabla de datos
+private void mostrarDatosEnTabla() {
+        // Crear un DefaultTableModel
         DefaultTableModel modelo = new DefaultTableModel();
-        modelo.addColumn("Código");
-        modelo.addColumn("Título");
         
-        // Agregar más columnas según sea necesario
+        // Definir las columnas de la tabla
+        modelo.addColumn("Código");
+        modelo.addColumn("Frase");
+        modelo.addColumn("Autor");
+        modelo.addColumn("Categoría");
 
-        for (noticias noticia : noticiasList) {
-            Object[] fila = {noticia.getCod_not(), noticia.getTitulo()};
+        // Agregar filas con datos de la lista
+        for (frases frase : listaFrases) {
+            Object[] fila = {frase.getCod_frases(), frase.getTexto(), frase.getAutor(), frase.getCategoria()};
             modelo.addRow(fila);
         }
 
+        // Establecer el modelo en la tabla
         tabladatos.setModel(modelo);
     }
+    
 
-    private void limpiarCampos() {
-        // Limpiar los campos de texto y reiniciar la noticia actual
-        txtdescripcion.setText("");
-        txttitulo.setText("");
-        txtcontenido.setText("");
+private void limpiarCampos() {
+        // Limpiar los campos de texto
+        txtcodigo.setText("");
+        txtfrase.setText("");
+        txtfraseautor.setText("");
         txtcategoria.setText("");
-        txtweb.setText("");
-        txtautor.setText("");
-        calendario.setDate(null);
-
-        noticiaActual = null;
     }
 
 }
