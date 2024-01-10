@@ -208,6 +208,12 @@ limpiarTabla();
 
         // Cierra la ventana actual
         this.dispose();
+        
+        
+        Admin_Interfaz_Inicio vuelve=new Admin_Interfaz_Inicio();
+        vuelve.setVisible(true);
+        this.dispose();
+        
     }//GEN-LAST:event_jLabel18MouseClicked
 
     /**
