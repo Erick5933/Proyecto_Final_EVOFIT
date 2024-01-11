@@ -23,12 +23,19 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Component id="jPanel1" alignment="0" pref="532" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
+<<<<<<< HEAD
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jPanel1" min="-2" pref="529" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+          </Group>
+=======
           <Component id="jPanel1" alignment="0" pref="646" max="32767" attributes="0"/>
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
       </Group>
     </DimensionLayout>
   </Layout>
@@ -55,7 +62,7 @@
           </Events>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="954" y="0" width="30" height="40"/>
+              <AbsoluteConstraints x="430" y="0" width="30" height="40"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -126,7 +133,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="0" y="10" width="610" height="80"/>
+              <AbsoluteConstraints x="130" y="10" width="240" height="80"/>
             </Constraint>
           </Constraints>
 
@@ -134,10 +141,15 @@
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+<<<<<<< HEAD
+                      <Component id="jLabel2" min="-2" pref="238" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="125" max="-2" attributes="0"/>
+=======
                       <Component id="jLabel2" min="-2" pref="218" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="145" max="-2" attributes="0"/>
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="247" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -149,7 +161,7 @@
                           <Component id="jLabel4" max="32767" attributes="0"/>
                           <Component id="jLabel2" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="18" max="32767" attributes="0"/>
+                      <EmptySpace pref="16" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -174,6 +186,24 @@
             </Component>
           </SubComponents>
         </Container>
+<<<<<<< HEAD
+        <Component class="javax.swing.JLabel" name="botonregresar">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/proyecto_final/Imagenes/atras_32px.png"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonregresarMouseClicked"/>
+          </Events>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="10" y="10" width="50" height="40"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+=======
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
       </SubComponents>
     </Container>
   </SubComponents>

@@ -56,6 +56,9 @@ public class Miscomidas extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel4 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -188,8 +191,8 @@ public class Miscomidas extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("Nombre: ");
-        panelRound1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 30));
+        jLabel10.setText("Ingredientes");
+        panelRound1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, -1, 30));
 
         proteinas.setBackground(new java.awt.Color(70, 86, 132));
         proteinas.setFont(new java.awt.Font("Open Sans ExtraBold", 0, 12)); // NOI18N
@@ -295,6 +298,19 @@ public class Miscomidas extends javax.swing.JFrame {
             }
         });
         panelRound1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 500, 40, -1));
+
+        jTextArea1.setBackground(new java.awt.Color(70, 86, 132));
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        panelRound1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 100, 140));
+
+        jLabel14.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setText("Nombre: ");
+        panelRound1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -488,6 +504,7 @@ public class Miscomidas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -496,7 +513,9 @@ public class Miscomidas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
     private proyecto_final.PanelRound panelRound1;
     private proyecto_final.PanelRound panelRound2;
     private proyecto_final.PanelRound panelRound7;

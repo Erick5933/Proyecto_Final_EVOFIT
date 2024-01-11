@@ -14,16 +14,15 @@ import proyecto_final.Clases.noticias;
  * @author Erick
  */
 public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
-    
-    public static ArrayList<Comidas_Clase> listaComida=new ArrayList<>();
-    
+
+    public static ArrayList<Comidas_Clase> listaComida = new ArrayList<>();
 
     /**
      * Creates new form Admin_Interfaz_Inicio
      */
     public Admin_Interfaz_Inicio() {
         initComponents();
-        this.setLocationRelativeTo(this);
+        this.setLocationRelativeTo(null);
 
     }
 
@@ -38,14 +37,16 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
 
         jPasswordField1 = new javax.swing.JPasswordField();
         titulo = new javax.swing.JLabel();
-        bot_usuario = new javax.swing.JButton();
-        bot_frases = new javax.swing.JButton();
+        bot_noticas = new javax.swing.JButton();
         bot_comida = new javax.swing.JButton();
-        bot_noticias = new javax.swing.JButton();
+        bot_frasess = new javax.swing.JButton();
+        bot_usuario1 = new javax.swing.JButton();
+        bot_foro = new javax.swing.JButton();
         panelRound1 = new proyecto_final.PanelRound();
         jLabel8 = new javax.swing.JLabel();
         jSeparator4 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
+        bot_Comida1 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
 
@@ -59,20 +60,18 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         titulo.setFont(new java.awt.Font("Stencil", 0, 36)); // NOI18N
         getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 120, 40));
 
-        bot_usuario.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
-        bot_usuario.setText("usuario");
-        bot_usuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bot_usuario.addActionListener(new java.awt.event.ActionListener() {
+        bot_noticas.setBackground(new java.awt.Color(75, 77, 110));
+        bot_noticas.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 18)); // NOI18N
+        bot_noticas.setForeground(new java.awt.Color(255, 255, 255));
+        bot_noticas.setText("Noticias");
+        bot_noticas.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        bot_noticas.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bot_noticas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bot_usuarioActionPerformed(evt);
+                bot_noticasActionPerformed(evt);
             }
         });
-        getContentPane().add(bot_usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 200, 70));
-
-        bot_frases.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
-        bot_frases.setText("frases");
-        bot_frases.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(bot_frases, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 310, 200, 60));
+        getContentPane().add(bot_noticas, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 200, 180, 60));
 
         bot_comida.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
         bot_comida.setText("comida");
@@ -82,17 +81,46 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
                 bot_comidaActionPerformed(evt);
             }
         });
-        getContentPane().add(bot_comida, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 230, 200, 60));
+        getContentPane().add(bot_comida, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, 0, 60));
 
-        bot_noticias.setFont(new java.awt.Font("Stencil", 1, 14)); // NOI18N
-        bot_noticias.setText("noticias");
-        bot_noticias.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bot_noticias.addActionListener(new java.awt.event.ActionListener() {
+        bot_frasess.setBackground(new java.awt.Color(75, 77, 110));
+        bot_frasess.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 18)); // NOI18N
+        bot_frasess.setForeground(new java.awt.Color(255, 255, 255));
+        bot_frasess.setText("Frases");
+        bot_frasess.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        bot_frasess.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bot_frasess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bot_noticiasActionPerformed(evt);
+                bot_frasessActionPerformed(evt);
             }
         });
-        getContentPane().add(bot_noticias, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 150, 200, 60));
+        getContentPane().add(bot_frasess, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 270, 180, 60));
+
+        bot_usuario1.setBackground(new java.awt.Color(75, 77, 110));
+        bot_usuario1.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 18)); // NOI18N
+        bot_usuario1.setForeground(new java.awt.Color(255, 255, 255));
+        bot_usuario1.setText("Usuarios");
+        bot_usuario1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        bot_usuario1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bot_usuario1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bot_usuario1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bot_usuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 60, 180, 60));
+
+        bot_foro.setBackground(new java.awt.Color(75, 77, 110));
+        bot_foro.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 18)); // NOI18N
+        bot_foro.setForeground(new java.awt.Color(255, 255, 255));
+        bot_foro.setText("Foro");
+        bot_foro.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        bot_foro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bot_foro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bot_foroActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bot_foro, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 340, 180, 60));
 
         panelRound1.setBackground(new java.awt.Color(44, 44, 59));
         panelRound1.setRoundBottomLeft(20);
@@ -105,14 +133,30 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setText("ADMIN");
-        panelRound1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
+        panelRound1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
         panelRound1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 305, 28));
 
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/Logo_conCirculo-removebg-preview (2).png"))); // NOI18N
-        panelRound1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 90, 330, 250));
+        panelRound1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 320, 250));
 
         getContentPane().add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
+<<<<<<< HEAD
+
+        bot_Comida1.setBackground(new java.awt.Color(75, 77, 110));
+        bot_Comida1.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 18)); // NOI18N
+        bot_Comida1.setForeground(new java.awt.Color(255, 255, 255));
+        bot_Comida1.setText("Comidas");
+        bot_Comida1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        bot_Comida1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bot_Comida1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bot_Comida1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(bot_Comida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 180, 60));
+=======
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/boton.png"))); // NOI18N
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -120,20 +164,17 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
                 jLabel3MouseClicked(evt);
             }
         });
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(904, 0, 30, 30));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 30, 30));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1003541_1.png"))); // NOI18N
+<<<<<<< HEAD
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 490));
+=======
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 540));
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void bot_noticiasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_noticiasActionPerformed
-        Noticias_Admin noti = new Noticias_Admin();
-        noti.setVisible(true);
-        this.dispose();
-
-    }//GEN-LAST:event_bot_noticiasActionPerformed
 
     private void bot_comidaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_comidaActionPerformed
         // TODO add your handling code here:
@@ -142,20 +183,57 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_bot_comidaActionPerformed
 
-    private void bot_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_usuarioActionPerformed
-            AdminUsuario newFrame = new AdminUsuario();
-             newFrame.setVisible(true);
-             this.dispose();
-             newFrame.setLocationRelativeTo(null);
+    private void bot_noticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_noticasActionPerformed
+        Noticias_Admin newFrame = new Noticias_Admin();
+        newFrame.setVisible(true);
+        this.dispose();
+        newFrame.setLocationRelativeTo(null);
 
-    }//GEN-LAST:event_bot_usuarioActionPerformed
+    }//GEN-LAST:event_bot_noticasActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
         dispose();
+
+
     }//GEN-LAST:event_jLabel3MouseClicked
 
+    private void bot_usuario1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_usuario1ActionPerformed
+        // TODO add your handling code here:
+
+        Admin_registro_usuarios newFrame = new Admin_registro_usuarios();
+        newFrame.setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_bot_usuario1ActionPerformed
+
+    private void bot_frasessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_frasessActionPerformed
+        // TODO add your handling code here:
+        Frases_Admin newFrame = new Frases_Admin();
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_bot_frasessActionPerformed
+
+    private void bot_Comida1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_Comida1ActionPerformed
+        // TODO add your handling code here:
+
+        Comidas newFrame = new Comidas();
+        newFrame.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_bot_Comida1ActionPerformed
+
+    private void bot_foroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bot_foroActionPerformed
+        // TODO add your handling code here:
+
+//          Foro newFrame = new Frases_Admin();
+//        newFrame.setVisible(true);
+//        this.dispose();
+    }//GEN-LAST:event_bot_foroActionPerformed
+
     /**
+     *
+     *
+     *
      * @param args the command line arguments
      */
     public static void main(String args[]) {
@@ -170,10 +248,18 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton bot_Comida1;
     private javax.swing.JButton bot_comida;
+<<<<<<< HEAD
+    private javax.swing.JButton bot_foro;
+    private javax.swing.JButton bot_frasess;
+    private javax.swing.JButton bot_noticas;
+    private javax.swing.JButton bot_usuario1;
+=======
     private javax.swing.JButton bot_frases;
     private javax.swing.JButton bot_noticias;
     private javax.swing.JButton bot_usuario;
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
