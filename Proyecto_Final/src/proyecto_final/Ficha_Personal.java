@@ -16,6 +16,8 @@ public class Ficha_Personal extends javax.swing.JFrame {
      */
     public Ficha_Personal() {
         initComponents();
+
+        this.setLocationRelativeTo(this);
     }
 
     /**
@@ -27,21 +29,226 @@ public class Ficha_Personal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jPanel1 = new javax.swing.JPanel();
+        panelRound1 = new proyecto_final.PanelRound();
+        jLabel12 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jTextField4 = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        jTextField7 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        jTextField9 = new javax.swing.JTextField();
+        panelRound2 = new proyecto_final.PanelRound();
+        panelRound3 = new proyecto_final.PanelRound();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jSeparator4 = new javax.swing.JSeparator();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(71, 71, 132));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        panelRound1.setBackground(new java.awt.Color(44, 44, 59));
+        panelRound1.setRoundBottomLeft(40);
+        panelRound1.setRoundBottomRight(40);
+        panelRound1.setRoundTopLeft(40);
+        panelRound1.setRoundTopRight(40);
+        panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel12.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 12)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Nombre:");
+        panelRound1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, 70, -1));
+
+        jTextField1.setEditable(false);
+        jTextField1.setBackground(new java.awt.Color(44, 44, 59));
+        jTextField1.setBorder(null);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        panelRound1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, 230, 20));
+
+        jLabel5.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel5.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Apellido:");
+        panelRound1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 70, -1));
+
+        jTextField2.setEditable(false);
+        jTextField2.setBackground(new java.awt.Color(44, 44, 59));
+        jTextField2.setBorder(null);
+        panelRound1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 180, 230, 20));
+        jTextField2.getAccessibleContext().setAccessibleName("");
+
+        jLabel10.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 12)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setText("Edad:");
+        panelRound1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 50, -1));
+
+        jTextField3.setEditable(false);
+        jTextField3.setBackground(new java.awt.Color(44, 44, 59));
+        jTextField3.setBorder(null);
+        panelRound1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 230, 20));
+        jTextField3.getAccessibleContext().setAccessibleName("");
+
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("Usuario:");
+        panelRound1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 70, -1));
+
+        jTextField4.setEditable(false);
+        jTextField4.setBackground(new java.awt.Color(44, 44, 59));
+        jTextField4.setBorder(null);
+        panelRound1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 240, 230, 20));
+        jTextField4.getAccessibleContext().setAccessibleName("");
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 12)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("Contraseña:");
+        panelRound1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, 90, -1));
+
+        jTextField5.setEditable(false);
+        jTextField5.setBackground(new java.awt.Color(44, 44, 59));
+        jTextField5.setBorder(null);
+        panelRound1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 270, 210, 20));
+        jTextField5.getAccessibleContext().setAccessibleName("");
+
+        jLabel11.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 12)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Genero:");
+        panelRound1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 70, -1));
+
+        jTextField6.setEditable(false);
+        jTextField6.setBackground(new java.awt.Color(44, 44, 59));
+        jTextField6.setBorder(null);
+        panelRound1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 300, 240, 20));
+        jTextField6.getAccessibleContext().setAccessibleName("");
+
+        jLabel9.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 12)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Altura");
+        panelRound1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, 60, -1));
+
+        jTextField7.setEditable(false);
+        jTextField7.setBackground(new java.awt.Color(44, 44, 59));
+        jTextField7.setBorder(null);
+        panelRound1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 240, 20));
+        jTextField7.getAccessibleContext().setAccessibleName("");
+
+        jLabel8.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Peso:");
+        panelRound1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 60, -1));
+
+        jTextField8.setEditable(false);
+        jTextField8.setBackground(new java.awt.Color(44, 44, 59));
+        jTextField8.setBorder(null);
+        jTextField8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField8ActionPerformed(evt);
+            }
+        });
+        panelRound1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 240, 20));
+        jTextField8.getAccessibleContext().setAccessibleName("");
+
+        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel4.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Proceso:");
+        panelRound1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 70, -1));
+
+        jTextField9.setEditable(false);
+        jTextField9.setBackground(new java.awt.Color(44, 44, 59));
+        jTextField9.setBorder(null);
+        panelRound1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, 230, 20));
+        jTextField9.getAccessibleContext().setAccessibleName("");
+
+        panelRound2.setBackground(new java.awt.Color(239, 204, 154));
+        panelRound2.setRoundBottomLeft(150);
+        panelRound2.setRoundBottomRight(150);
+        panelRound2.setRoundTopLeft(150);
+        panelRound2.setRoundTopRight(150);
+
+        javax.swing.GroupLayout panelRound2Layout = new javax.swing.GroupLayout(panelRound2);
+        panelRound2.setLayout(panelRound2Layout);
+        panelRound2Layout.setHorizontalGroup(
+            panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 140, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        panelRound2Layout.setVerticalGroup(
+            panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 120, Short.MAX_VALUE)
         );
+
+        panelRound1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
+
+        panelRound3.setBackground(new java.awt.Color(71, 71, 132));
+        panelRound3.setRoundBottomLeft(20);
+        panelRound3.setRoundBottomRight(20);
+        panelRound3.setRoundTopLeft(20);
+        panelRound3.setRoundTopRight(20);
+        panelRound3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/boton.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        panelRound3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, -1, -1));
+
+        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/Logo_conCirculo-removebg-preview (2).png"))); // NOI18N
+        panelRound3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 190, 250));
+
+        jLabel16.setFont(new java.awt.Font("Arial Black", 1, 24)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel16.setText("EVOFIT");
+        panelRound3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 120, -1));
+        panelRound3.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 190, 28));
+
+        panelRound1.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 20, 220, 410));
+
+        jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 650, 450));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 720, 489));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField8ActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        dispose();
+    }//GEN-LAST:event_jLabel1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +286,31 @@ public class Ficha_Personal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
+    private proyecto_final.PanelRound panelRound1;
+    private proyecto_final.PanelRound panelRound2;
+    private proyecto_final.PanelRound panelRound3;
     // End of variables declaration//GEN-END:variables
 }
