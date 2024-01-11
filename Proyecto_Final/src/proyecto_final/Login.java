@@ -19,8 +19,13 @@ import proyecto_final.Clases.Registro_Admin;
 public class Login extends javax.swing.JFrame {
 
     private boolean usuarioInteractuado = false;
+<<<<<<< Updated upstream
    public static ArrayList<Clase_Registrarse> Lista = Registro.Lista;
 //public static ArrayList<Registro_Admin> ListaRegistroAdmin = Registro_Admin.ListaRegistroAdmin;
+=======
+
+    public static ArrayList<Clase_Registrarse> Lista =Registro.Lista;
+>>>>>>> Stashed changes
 
 
     /**
@@ -371,6 +376,7 @@ public class Login extends javax.swing.JFrame {
         // Si el usuario está registrado, mostrar un mensaje de inicio de sesión exitoso
         if (usuarioRegistrado) {
             JOptionPane.showMessageDialog(this, "Inicio de sesión exitoso.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+<<<<<<< Updated upstream
 
             Persona_Interfaz_Inicio newFrame = new Persona_Interfaz_Inicio();
             newFrame.setVisible(true);
@@ -380,6 +386,18 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
         }
 
+=======
+
+            // Puedes abrir la ventana principal aquí
+            // Persona_Interfaz_Inicio newFrame = new Persona_Interfaz_Inicio();
+            // newFrame.setVisible(true);
+            // this.dispose();
+            // newFrame.setLocationRelativeTo(null);
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    
+>>>>>>> Stashed changes
 
     }//GEN-LAST:event_jButton1ActionPerformed
 

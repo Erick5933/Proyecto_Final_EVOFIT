@@ -17,10 +17,14 @@ import java.util.ArrayList;
  * @author Erick
  */
 public class Registro extends javax.swing.JFrame {
+<<<<<<< Updated upstream
     public static ArrayList<Clase_Registrarse> Lista = new ArrayList<>();
         private Admin_registro_usuarios adminUsuario;
 
 
+=======
+public static ArrayList<Clase_Registrarse> Lista=new ArrayList<>();
+>>>>>>> Stashed changes
     /**
      * Creates new form Registro
      */
