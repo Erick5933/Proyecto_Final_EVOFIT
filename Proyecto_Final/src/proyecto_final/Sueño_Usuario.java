@@ -16,8 +16,11 @@ public class Sueño_Usuario extends javax.swing.JFrame {
      */
     public Sueño_Usuario() {
         initComponents();
+<<<<<<< HEAD
         
         this.setLocationRelativeTo(null);
+=======
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
     }
 
     /**
@@ -36,11 +39,12 @@ public class Sueño_Usuario extends javax.swing.JFrame {
         panelRound1 = new proyecto_final.PanelRound();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+<<<<<<< HEAD
         botonregresar = new javax.swing.JLabel();
+=======
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
-        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(84, 71, 132));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -104,8 +108,13 @@ public class Sueño_Usuario extends javax.swing.JFrame {
         panelRound1Layout.setHorizontalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound1Layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(125, 125, 125)
+=======
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(145, 145, 145)
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
                 .addComponent(jLabel4)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -116,11 +125,16 @@ public class Sueño_Usuario extends javax.swing.JFrame {
                 .addGroup(panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+<<<<<<< HEAD
                 .addContainerGap(16, Short.MAX_VALUE))
+=======
+                .addContainerGap(18, Short.MAX_VALUE))
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
         );
 
         jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 240, 80));
 
+<<<<<<< HEAD
         botonregresar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/atras_32px.png"))); // NOI18N
         botonregresar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -129,6 +143,8 @@ public class Sueño_Usuario extends javax.swing.JFrame {
         });
         jPanel1.add(botonregresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 50, 40));
 
+=======
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -137,9 +153,13 @@ public class Sueño_Usuario extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 529, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+=======
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 646, Short.MAX_VALUE)
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
         );
 
         pack();
@@ -157,12 +177,15 @@ public class Sueño_Usuario extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jLabel1MouseClicked
 
+<<<<<<< HEAD
     private void botonregresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonregresarMouseClicked
         Admin_Interfaz_Inicio volvi = new Admin_Interfaz_Inicio();
         volvi.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_botonregresarMouseClicked
 
+=======
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
     /**
      * @param args the command line arguments
      */
@@ -199,7 +222,10 @@ public class Sueño_Usuario extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JLabel botonregresar;
+=======
+>>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

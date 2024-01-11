@@ -62,8 +62,6 @@ private ArrayList<frases> listaFrases = new ArrayList<>();
         botonregresar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
-        setResizable(false);
 
         panelRound1.setBackground(new java.awt.Color(84, 71, 132));
         panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
