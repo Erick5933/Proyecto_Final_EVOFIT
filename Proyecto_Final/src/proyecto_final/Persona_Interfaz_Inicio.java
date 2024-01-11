@@ -517,8 +517,8 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         jLabel35.setBackground(new java.awt.Color(102, 153, 0));
         jLabel35.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 18)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel35.setText("120G");
-        panelRound14.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
+        jLabel35.setText("G");
+        panelRound14.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, -1, -1));
 
         panelRound16.setBackground(new java.awt.Color(84, 71, 132));
         panelRound16.setPreferredSize(new java.awt.Dimension(100, 80));
@@ -542,8 +542,8 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         jLabel34.setBackground(new java.awt.Color(102, 153, 0));
         jLabel34.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 18)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel34.setText("70G");
-        panelRound16.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
+        jLabel34.setText("G");
+        panelRound16.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 60, -1));
 
         panelRound17.setBackground(new java.awt.Color(84, 71, 132));
         panelRound17.setPreferredSize(new java.awt.Dimension(100, 80));
@@ -567,8 +567,8 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
         jLabel30.setBackground(new java.awt.Color(102, 153, 0));
         jLabel30.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 18)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel30.setText("30G");
-        panelRound17.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
+        jLabel30.setText("G");
+        panelRound17.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 30, -1));
 
         panelRound15.setBackground(new java.awt.Color(70, 86, 132));
         panelRound15.setRoundBottomLeft(100);
