@@ -657,11 +657,7 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
         //// ---------- Dormir 
         Sueño_Usuario ventanaLogin = new Sueño_Usuario();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
         ventanaLogin.setVisible(true);

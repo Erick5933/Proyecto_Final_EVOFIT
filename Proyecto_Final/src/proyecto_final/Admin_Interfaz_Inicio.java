@@ -141,7 +141,7 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         panelRound1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 320, 250));
 
         getContentPane().add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
-<<<<<<< HEAD
+
 
         bot_Comida1.setBackground(new java.awt.Color(75, 77, 110));
         bot_Comida1.setFont(new java.awt.Font("Open Sans ExtraBold", 1, 18)); // NOI18N
@@ -155,8 +155,7 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
             }
         });
         getContentPane().add(bot_Comida1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 130, 180, 60));
-=======
->>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
+
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/boton.png"))); // NOI18N
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -167,11 +166,11 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 10, 30, 30));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1003541_1.png"))); // NOI18N
-<<<<<<< HEAD
+
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 710, 490));
-=======
+
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 540));
->>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
+
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -250,16 +249,16 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bot_Comida1;
     private javax.swing.JButton bot_comida;
-<<<<<<< HEAD
+
     private javax.swing.JButton bot_foro;
     private javax.swing.JButton bot_frasess;
     private javax.swing.JButton bot_noticas;
     private javax.swing.JButton bot_usuario1;
-=======
+
     private javax.swing.JButton bot_frases;
     private javax.swing.JButton bot_noticias;
     private javax.swing.JButton bot_usuario;
->>>>>>> parent of 1e9d81e (sueño y nueva biblioteca)
+
     private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;

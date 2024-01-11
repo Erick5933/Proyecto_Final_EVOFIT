@@ -29,7 +29,7 @@ public class Ficha_Personal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
+
         jPanel1 = new javax.swing.JPanel();
         panelRound1 = new proyecto_final.PanelRound();
         jLabel12 = new javax.swing.JLabel();
@@ -199,8 +199,8 @@ public class Ficha_Personal extends javax.swing.JFrame {
         );
         panelRound2Layout.setVerticalGroup(
             panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
-=======
+            .addGap(0, 120, Short.MAX_VALUE));
+
         botonregresar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -231,7 +231,7 @@ public class Ficha_Personal extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(botonregresar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
->>>>>>> 070b532a722e82e5a84b37f2c33b9996fba9638a
+
         );
 
         panelRound1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 20, -1, -1));
@@ -284,9 +284,9 @@ public class Ficha_Personal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void botonregresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonregresarMouseClicked
-        Admin_Interfaz_Inicio volvi = new Admin_Interfaz_Inicio();
-        volvi.setVisible(true);
-        this.dispose();
+//        Admin_Interfaz_Inicio volvi = new Admin_Interfaz_Inicio();
+//        volvi.setVisible(true);
+//        this.dispose();
 
     }//GEN-LAST:event_botonregresarMouseClicked
 
@@ -327,7 +327,6 @@ public class Ficha_Personal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -354,8 +353,6 @@ public class Ficha_Personal extends javax.swing.JFrame {
     private proyecto_final.PanelRound panelRound1;
     private proyecto_final.PanelRound panelRound2;
     private proyecto_final.PanelRound panelRound3;
-=======
     private javax.swing.JLabel botonregresar;
->>>>>>> 070b532a722e82e5a84b37f2c33b9996fba9638a
     // End of variables declaration//GEN-END:variables
 }
