@@ -6,12 +6,12 @@
 package proyecto_final;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
-import static proyecto_final.Admin_Interfaz_Inicio.listaComida;
 import proyecto_final.Clases.Comidas_Clase;
 
 /**
@@ -28,6 +28,13 @@ public class Comidas extends javax.swing.JFrame {
     public Comidas() {
         initComponents();
         this.setLocationRelativeTo(this);
+
+        setBackground(new Color(0, 0, 0, 0));
+        Registro.getTableHeader().setFont(new Font("SEGOE UI", Font.BOLD, 12));
+        Registro.getTableHeader().setOpaque(false);
+        Registro.getTableHeader().setBackground(new Color(70, 86, 132));
+        Registro.getTableHeader().setForeground(new Color(70, 86, 132));
+        Registro.setRowHeight(25);
 
     }
 
@@ -67,19 +74,18 @@ public class Comidas extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         panelRound5 = new proyecto_final.PanelRound();
-        Ingresar_Comida = new javax.swing.JLabel();
-        Eliminar = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        Tabla = new javax.swing.JScrollPane();
         Registro = new javax.swing.JTable();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        panelRound3 = new proyecto_final.PanelRound();
+        Ingresar_Comida = new javax.swing.JLabel();
         Modificar = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        Eliminar = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         panelRound1 = new proyecto_final.PanelRound();
         jLabel5 = new javax.swing.JLabel();
         panelRound2 = new proyecto_final.PanelRound();
         jTextField1 = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -100,7 +106,7 @@ public class Comidas extends javax.swing.JFrame {
                 jLabel3MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(875, 0, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(745, 0, -1, -1));
 
         panelRound5.setBackground(new java.awt.Color(70, 86, 132));
         panelRound5.setRoundBottomLeft(30);
@@ -109,48 +115,90 @@ public class Comidas extends javax.swing.JFrame {
         panelRound5.setRoundTopRight(30);
         panelRound5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        Tabla.setBackground(new java.awt.Color(70, 86, 132));
+        Tabla.setBorder(null);
+
+        Registro.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {},
+                {},
+                {},
+                {}
+            },
+            new String [] {
+
+            }
+        ));
+        Tabla.setViewportView(Registro);
+
+        panelRound5.add(Tabla, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 16, 546, 263));
+
+        panelRound3.setBackground(new java.awt.Color(239, 204, 154));
+        panelRound3.setRoundBottomRight(40);
+        panelRound3.setRoundTopRight(40);
+
         Ingresar_Comida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Ingresar_Comida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
+        Ingresar_Comida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/agregar.png"))); // NOI18N
         Ingresar_Comida.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 Ingresar_ComidaMouseClicked(evt);
             }
         });
-        panelRound5.add(Ingresar_Comida, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, -1, -1));
 
-        Eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/exit_delete_17889.png"))); // NOI18N
-        Eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                EliminarMouseClicked(evt);
-            }
-        });
-        panelRound5.add(Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, -1, -1));
-
-        jScrollPane1.setViewportView(Registro);
-
-        panelRound5.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 85, 583, 250));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/Dish_Pasta_Spaghetti_26373.png"))); // NOI18N
-        panelRound5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, -1, -1));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/egg_bacon_dish_plate_food_icon_207982.png"))); // NOI18N
-        panelRound5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, -1, -1));
-
-        Modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/edit_modify_icon_196940.png"))); // NOI18N
+        Modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/modificar.png"))); // NOI18N
         Modificar.setToolTipText("");
         Modificar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ModificarMouseClicked(evt);
             }
         });
-        panelRound5.add(Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/dish_87586.png"))); // NOI18N
-        panelRound5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, -1, -1));
+        Eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/eliminar.png"))); // NOI18N
+        Eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                EliminarMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelRound3Layout = new javax.swing.GroupLayout(panelRound3);
+        panelRound3.setLayout(panelRound3Layout);
+        panelRound3Layout.setHorizontalGroup(
+            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound3Layout.createSequentialGroup()
+                .addGroup(panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Eliminar)
+                    .addComponent(Modificar)
+                    .addComponent(Ingresar_Comida))
+                .addGap(0, 2, Short.MAX_VALUE))
+        );
+        panelRound3Layout.setVerticalGroup(
+            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Ingresar_Comida)
+                .addGap(18, 18, 18)
+                .addComponent(Modificar)
+                .addGap(18, 18, 18)
+                .addComponent(Eliminar)
+                .addContainerGap(109, Short.MAX_VALUE))
+        );
+
+        panelRound5.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 0, 50, 300));
+
+        jPanel1.add(panelRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 90, 640, 300));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/atras_32px.png"))); // NOI18N
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 40, -1));
 
         panelRound1.setBackground(new java.awt.Color(238, 163, 193));
         panelRound1.setRoundBottomRight(40);
 
+        jLabel5.setBackground(new java.awt.Color(239, 204, 154));
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/buscar_morado.png"))); // NOI18N
 
         javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
@@ -169,12 +217,12 @@ public class Comidas extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        panelRound5.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(746, 20, -1, -1));
+        jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 40, -1, -1));
 
-        panelRound2.setBackground(new java.awt.Color(238, 163, 193));
+        panelRound2.setBackground(new java.awt.Color(239, 204, 154));
         panelRound2.setRoundTopLeft(40);
 
-        jTextField1.setBackground(new java.awt.Color(238, 163, 193));
+        jTextField1.setBackground(new java.awt.Color(239, 204, 154));
         jTextField1.setBorder(null);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -196,19 +244,13 @@ public class Comidas extends javax.swing.JFrame {
             .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
         );
 
-        panelRound5.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 20, -1, 32));
+        jPanel1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 40, -1, -1));
 
-        jPanel1.add(panelRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 830, 420));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/Logo_sinCirculo (1).png"))); // NOI18N
+        jLabel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/atras_32px.png"))); // NOI18N
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 40, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 430));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -304,17 +346,16 @@ public class Comidas extends javax.swing.JFrame {
     private javax.swing.JLabel Ingresar_Comida;
     private javax.swing.JLabel Modificar;
     private javax.swing.JTable Registro;
+    private javax.swing.JScrollPane Tabla;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private proyecto_final.PanelRound panelRound1;
     private proyecto_final.PanelRound panelRound2;
+    private proyecto_final.PanelRound panelRound3;
     private proyecto_final.PanelRound panelRound5;
     // End of variables declaration//GEN-END:variables
 

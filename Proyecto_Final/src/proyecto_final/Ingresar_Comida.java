@@ -333,90 +333,7 @@ public class Ingresar_Comida extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void CodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CodigoKeyTyped
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CodigoKeyTyped
-
     private boolean campoVacioAntes = true;
-    private void NombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NombreKeyTyped
-
-        char c = evt.getKeyChar();
-        if (campoVacioAntes && !Character.isLetter(c) && Character.isWhitespace(c)) {
-            evt.consume();
-        } else if (Character.isWhitespace(c) && Character.isLetter(c) || Character.isDigit(c)) {
-            evt.consume();
-            JOptionPane.showMessageDialog(this, "Por favor, ingrese solo letras y espacios.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-        }
-        campoVacioAntes = Nombre.getText().isEmpty();
-
-        JTextField textField = (JTextField) evt.getSource();
-        if (textField.getText().length() >= 50) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_NombreKeyTyped
-
-    private void TipoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TipoKeyTyped
-        char c = evt.getKeyChar();
-        if (campoVacioAntes && !Character.isLetter(c) && Character.isWhitespace(c)) {
-            evt.consume();
-        } else if (Character.isWhitespace(c) && Character.isLetter(c) || Character.isDigit(c)) {
-            evt.consume();
-            JOptionPane.showMessageDialog(this, "Por favor, ingrese solo letras y espacios.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
-        }
-        campoVacioAntes = Nombre.getText().isEmpty();
-
-        JTextField textField = (JTextField) evt.getSource();
-        if (textField.getText().length() >= 50) {
-            evt.consume();
-        }
-    }//GEN-LAST:event_TipoKeyTyped
-
-    private void ProteinaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ProteinaKeyTyped
-        char c = evt.getKeyChar();
-        JTextField proteinaTextField = (JTextField) evt.getSource();
-
-        // Permitir solo dígitos, punto decimal, DELETE y BACK_SPACE
-        if (!(Character.isDigit(c) || c == KeyEvent.VK_PERIOD || c == KeyEvent.VK_DELETE || c == KeyEvent.VK_BACK_SPACE)) {
-            evt.consume();
-        }
-
-        // Obtener el texto actual en el campo de proteína
-        String proteinaText = proteinaTextField.getText() + c;
-
-        // Validar si el texto es un número válido de gramos (mayor o igual a cero)
-        try {
-            double proteinaValue = Double.parseDouble(proteinaText);
-            if (proteinaValue < 0) {
-                evt.consume();
-            }
-        } catch (NumberFormatException e) {
-            evt.consume(); // Consumir el evento si no se puede convertir a un número
-        }
-    }//GEN-LAST:event_ProteinaKeyTyped
-
-    private void CarbohidratoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CarbohidratoKeyTyped
-        char c = evt.getKeyChar();
-        JTextField proteinaTextField = (JTextField) evt.getSource();
-
-        // Permitir solo dígitos, punto decimal, DELETE y BACK_SPACE
-        if (!(Character.isDigit(c) || c == KeyEvent.VK_PERIOD || c == KeyEvent.VK_DELETE || c == KeyEvent.VK_BACK_SPACE)) {
-            evt.consume();
-        }
-
-        // Obtener el texto actual en el campo de proteína
-        String proteinaText = proteinaTextField.getText() + c;
-
-        // Validar si el texto es un número válido de gramos (mayor o igual a cero)
-        try {
-            double proteinaValue = Double.parseDouble(proteinaText);
-            if (proteinaValue < 0) {
-                evt.consume();
-            }
-        } catch (NumberFormatException e) {
-            evt.consume(); // Consumir el evento si no se puede convertir a un número
-        }
-    }//GEN-LAST:event_CarbohidratoKeyTyped
-
     private void CaloriasKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CaloriasKeyTyped
         char c = evt.getKeyChar();
         JTextField proteinaTextField = (JTextField) evt.getSource();
@@ -505,6 +422,89 @@ public class Ingresar_Comida extends javax.swing.JFrame {
 
 
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void CarbohidratoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CarbohidratoKeyTyped
+        char c = evt.getKeyChar();
+        JTextField proteinaTextField = (JTextField) evt.getSource();
+
+        // Permitir solo dígitos, punto decimal, DELETE y BACK_SPACE
+        if (!(Character.isDigit(c) || c == KeyEvent.VK_PERIOD || c == KeyEvent.VK_DELETE || c == KeyEvent.VK_BACK_SPACE)) {
+            evt.consume();
+        }
+
+        // Obtener el texto actual en el campo de proteína
+        String proteinaText = proteinaTextField.getText() + c;
+
+        // Validar si el texto es un número válido de gramos (mayor o igual a cero)
+        try {
+            double proteinaValue = Double.parseDouble(proteinaText);
+            if (proteinaValue < 0) {
+                evt.consume();
+            }
+        } catch (NumberFormatException e) {
+            evt.consume(); // Consumir el evento si no se puede convertir a un número
+        }
+    }//GEN-LAST:event_CarbohidratoKeyTyped
+
+    private void ProteinaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_ProteinaKeyTyped
+        char c = evt.getKeyChar();
+        JTextField proteinaTextField = (JTextField) evt.getSource();
+
+        // Permitir solo dígitos, punto decimal, DELETE y BACK_SPACE
+        if (!(Character.isDigit(c) || c == KeyEvent.VK_PERIOD || c == KeyEvent.VK_DELETE || c == KeyEvent.VK_BACK_SPACE)) {
+            evt.consume();
+        }
+
+        // Obtener el texto actual en el campo de proteína
+        String proteinaText = proteinaTextField.getText() + c;
+
+        // Validar si el texto es un número válido de gramos (mayor o igual a cero)
+        try {
+            double proteinaValue = Double.parseDouble(proteinaText);
+            if (proteinaValue < 0) {
+                evt.consume();
+            }
+        } catch (NumberFormatException e) {
+            evt.consume(); // Consumir el evento si no se puede convertir a un número
+        }
+    }//GEN-LAST:event_ProteinaKeyTyped
+
+    private void TipoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TipoKeyTyped
+        char c = evt.getKeyChar();
+        if (campoVacioAntes && !Character.isLetter(c) && Character.isWhitespace(c)) {
+            evt.consume();
+        } else if (Character.isWhitespace(c) && Character.isLetter(c) || Character.isDigit(c)) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Por favor, ingrese solo letras y espacios.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
+        }
+        campoVacioAntes = Nombre.getText().isEmpty();
+
+        JTextField textField = (JTextField) evt.getSource();
+        if (textField.getText().length() >= 50) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_TipoKeyTyped
+
+    private void NombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_NombreKeyTyped
+
+        char c = evt.getKeyChar();
+        if (campoVacioAntes && !Character.isLetter(c) && Character.isWhitespace(c)) {
+            evt.consume();
+        } else if (Character.isWhitespace(c) && Character.isLetter(c) || Character.isDigit(c)) {
+            evt.consume();
+            JOptionPane.showMessageDialog(this, "Por favor, ingrese solo letras y espacios.", "Error de entrada", JOptionPane.ERROR_MESSAGE);
+        }
+        campoVacioAntes = Nombre.getText().isEmpty();
+
+        JTextField textField = (JTextField) evt.getSource();
+        if (textField.getText().length() >= 50) {
+            evt.consume();
+        }
+    }//GEN-LAST:event_NombreKeyTyped
+
+    private void CodigoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_CodigoKeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CodigoKeyTyped
 
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
