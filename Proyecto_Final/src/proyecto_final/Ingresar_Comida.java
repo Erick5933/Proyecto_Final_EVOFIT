@@ -23,7 +23,7 @@ import proyecto_final.Clases.Comidas_Clase;
  */
 public class Ingresar_Comida extends javax.swing.JFrame {
 
-    public static ArrayList<Comidas_Clase> Lista_Ingreso = new ArrayList<>();
+    
     DefaultTableModel modelo = new DefaultTableModel();
 
     /**
@@ -79,6 +79,7 @@ public class Ingresar_Comida extends javax.swing.JFrame {
         panelRound2 = new proyecto_final.PanelRound();
         jLabel7 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -89,8 +90,10 @@ public class Ingresar_Comida extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         panelRound1.setBackground(new java.awt.Color(70, 86, 132));
+        panelRound1.setRoundBottomLeft(50);
         panelRound1.setRoundBottomRight(50);
         panelRound1.setRoundTopLeft(50);
+        panelRound1.setRoundTopRight(50);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -208,7 +211,7 @@ public class Ingresar_Comida extends javax.swing.JFrame {
             panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound2Layout.createSequentialGroup()
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
@@ -316,6 +319,14 @@ public class Ingresar_Comida extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(675, 0, -1, -1));
+
+        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/atras_32px.png"))); // NOI18N
+        jLabel18.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel18MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 50, 40));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 700, 400));
 
@@ -495,6 +506,15 @@ public class Ingresar_Comida extends javax.swing.JFrame {
 
     }//GEN-LAST:event_jLabel7MouseClicked
 
+    private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
+        // TODO add your handling code here:
+
+        Admin_Interfaz_Inicio vuelve=new Admin_Interfaz_Inicio();
+        vuelve.setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_jLabel18MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -539,6 +559,7 @@ public class Ingresar_Comida extends javax.swing.JFrame {
     private javax.swing.JTextField Proteina;
     private javax.swing.JTextField Tipo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

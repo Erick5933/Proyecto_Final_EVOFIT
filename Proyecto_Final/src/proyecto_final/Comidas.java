@@ -5,10 +5,13 @@
  */
 package proyecto_final;
 
+import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.table.AbstractTableModel;
 import javax.swing.table.DefaultTableModel;
+import static proyecto_final.Admin_Interfaz_Inicio.listaComida;
 import proyecto_final.Clases.Comidas_Clase;
 
 /**
@@ -16,8 +19,6 @@ import proyecto_final.Clases.Comidas_Clase;
  * @author Wendy LLivichuzhca
  */
 public class Comidas extends javax.swing.JFrame {
-
-    public static ArrayList<Comidas_Clase> Lista_Ingreso = new ArrayList<>();
 
     DefaultTableModel modelo = new DefaultTableModel();
 
@@ -27,6 +28,7 @@ public class Comidas extends javax.swing.JFrame {
     public Comidas() {
         initComponents();
         this.setLocationRelativeTo(this);
+
     }
 
     public void MostrarDatos() {
@@ -64,8 +66,6 @@ public class Comidas extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        panelRound4 = new proyecto_final.PanelRound();
         panelRound5 = new proyecto_final.PanelRound();
         Ingresar_Comida = new javax.swing.JLabel();
         Eliminar = new javax.swing.JLabel();
@@ -78,6 +78,8 @@ public class Comidas extends javax.swing.JFrame {
         panelRound1 = new proyecto_final.PanelRound();
         jLabel5 = new javax.swing.JLabel();
         panelRound2 = new proyecto_final.PanelRound();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -100,42 +102,12 @@ public class Comidas extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(875, 0, -1, -1));
 
-        jLabel1.setBackground(new java.awt.Color(238, 163, 193));
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Regresar");
-        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
-            }
-        });
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 460, 120, 30));
-
-        panelRound4.setBackground(new java.awt.Color(238, 163, 193));
-        panelRound4.setRoundBottomLeft(40);
-        panelRound4.setRoundBottomRight(40);
-        panelRound4.setRoundTopLeft(40);
-        panelRound4.setRoundTopRight(40);
-
-        javax.swing.GroupLayout panelRound4Layout = new javax.swing.GroupLayout(panelRound4);
-        panelRound4.setLayout(panelRound4Layout);
-        panelRound4Layout.setHorizontalGroup(
-            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
-        );
-        panelRound4Layout.setVerticalGroup(
-            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 30, Short.MAX_VALUE)
-        );
-
-        jPanel1.add(panelRound4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 460, 120, 30));
-
         panelRound5.setBackground(new java.awt.Color(70, 86, 132));
         panelRound5.setRoundBottomLeft(30);
         panelRound5.setRoundBottomRight(30);
         panelRound5.setRoundTopLeft(30);
         panelRound5.setRoundTopRight(30);
+        panelRound5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Ingresar_Comida.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         Ingresar_Comida.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1486485588-add-create-new-math-sign-cross-plus_81186.png"))); // NOI18N
@@ -144,6 +116,7 @@ public class Comidas extends javax.swing.JFrame {
                 Ingresar_ComidaMouseClicked(evt);
             }
         });
+        panelRound5.add(Ingresar_Comida, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, -1, -1));
 
         Eliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/exit_delete_17889.png"))); // NOI18N
         Eliminar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -151,23 +124,17 @@ public class Comidas extends javax.swing.JFrame {
                 EliminarMouseClicked(evt);
             }
         });
+        panelRound5.add(Eliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, -1, -1));
 
-        Registro.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {},
-                {},
-                {},
-                {}
-            },
-            new String [] {
-
-            }
-        ));
         jScrollPane1.setViewportView(Registro);
 
+        panelRound5.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(53, 85, 583, 250));
+
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/Dish_Pasta_Spaghetti_26373.png"))); // NOI18N
+        panelRound5.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/egg_bacon_dish_plate_food_icon_207982.png"))); // NOI18N
+        panelRound5.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, -1, -1));
 
         Modificar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/edit_modify_icon_196940.png"))); // NOI18N
         Modificar.setToolTipText("");
@@ -176,8 +143,10 @@ public class Comidas extends javax.swing.JFrame {
                 ModificarMouseClicked(evt);
             }
         });
+        panelRound5.add(Modificar, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/dish_87586.png"))); // NOI18N
+        panelRound5.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, -1, -1));
 
         panelRound1.setBackground(new java.awt.Color(238, 163, 193));
         panelRound1.setRoundBottomRight(40);
@@ -200,88 +169,49 @@ public class Comidas extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
+        panelRound5.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(746, 20, -1, -1));
+
         panelRound2.setBackground(new java.awt.Color(238, 163, 193));
         panelRound2.setRoundTopLeft(40);
+
+        jTextField1.setBackground(new java.awt.Color(238, 163, 193));
+        jTextField1.setBorder(null);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelRound2Layout = new javax.swing.GroupLayout(panelRound2);
         panelRound2.setLayout(panelRound2Layout);
         panelRound2Layout.setHorizontalGroup(
             panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 181, Short.MAX_VALUE)
+            .addGroup(panelRound2Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
+                .addContainerGap())
         );
         panelRound2Layout.setVerticalGroup(
             panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout panelRound5Layout = new javax.swing.GroupLayout(panelRound5);
-        panelRound5.setLayout(panelRound5Layout);
-        panelRound5Layout.setHorizontalGroup(
-            panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound5Layout.createSequentialGroup()
-                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelRound5Layout.createSequentialGroup()
-                        .addGap(53, 53, 53)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelRound5Layout.createSequentialGroup()
-                                .addComponent(Eliminar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7))
-                            .addGroup(panelRound5Layout.createSequentialGroup()
-                                .addComponent(Modificar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel4))
-                            .addGroup(panelRound5Layout.createSequentialGroup()
-                                .addComponent(Ingresar_Comida)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6))))
-                    .addGroup(panelRound5Layout.createSequentialGroup()
-                        .addGap(565, 565, 565)
-                        .addComponent(panelRound2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(panelRound1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(46, 46, Short.MAX_VALUE))
-        );
-        panelRound5Layout.setVerticalGroup(
-            panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound5Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(panelRound1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(panelRound2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(33, 33, 33)
-                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelRound5Layout.createSequentialGroup()
-                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Ingresar_Comida)
-                            .addComponent(jLabel6))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(Eliminar)
-                            .addComponent(jLabel7))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Modificar)
-                            .addComponent(jLabel4))))
-                .addContainerGap(85, Short.MAX_VALUE))
-        );
+        panelRound5.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 20, -1, 32));
 
         jPanel1.add(panelRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 830, 420));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/atras_32px.png"))); // NOI18N
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 40, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        // TODO add your handling code here:
-        Admin_Interfaz_Inicio noticias = new Admin_Interfaz_Inicio();
-        noticias.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jLabel1MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
@@ -311,10 +241,23 @@ public class Comidas extends javax.swing.JFrame {
     }//GEN-LAST:event_EliminarMouseClicked
 
     private void ModificarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ModificarMouseClicked
-        // TODO add your handling code here:
-
 
     }//GEN-LAST:event_ModificarMouseClicked
+
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+
+        Admin_Interfaz_Inicio ventanaLogin = new Admin_Interfaz_Inicio();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
+        ventanaLogin.setVisible(true);
+
+        // Cierra la ventana actual
+        this.dispose();
+    }//GEN-LAST:event_jLabel8MouseClicked
 
     /**
      * @param args the command line arguments
@@ -361,17 +304,17 @@ public class Comidas extends javax.swing.JFrame {
     private javax.swing.JLabel Ingresar_Comida;
     private javax.swing.JLabel Modificar;
     private javax.swing.JTable Registro;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextField1;
     private proyecto_final.PanelRound panelRound1;
     private proyecto_final.PanelRound panelRound2;
-    private proyecto_final.PanelRound panelRound4;
     private proyecto_final.PanelRound panelRound5;
     // End of variables declaration//GEN-END:variables
 

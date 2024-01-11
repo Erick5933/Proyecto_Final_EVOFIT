@@ -16,19 +16,20 @@ import proyecto_final.Clases.Clase_Registrarse;
  *
  * @author KENNY
  */
-public class AdminUsuario extends javax.swing.JFrame {
+public class Admin_registro_usuarios extends javax.swing.JFrame {
 
     private DefaultTableModel modelo;
-    public static ArrayList<Clase_Registrarse> Lista = Registro.Lista;
+   public static ArrayList<Clase_Registrarse> Lista = Registro.Lista;
 
     /**
      * Creates new form AdminUsuario
      */
-    public AdminUsuario() {
+    public Admin_registro_usuarios() {
 
         initComponents();
         modelo = (DefaultTableModel) jTable1.getModel();
         Lista = new ArrayList();
+        this.setLocationRelativeTo(null);
 
     }
 
@@ -77,6 +78,8 @@ public class AdminUsuario extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -123,7 +126,7 @@ public class AdminUsuario extends javax.swing.JFrame {
         );
 
         panelRound1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 40));
-        panelRound1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 190, 30));
+        panelRound1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 190, 30));
 
         jButton1.setText("Buscar");
         jButton1.setBorder(null);
@@ -132,7 +135,7 @@ public class AdminUsuario extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        panelRound1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 90, 30));
+        panelRound1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 90, 30));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -157,11 +160,11 @@ public class AdminUsuario extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        panelRound1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 650, 360));
+        panelRound1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 650, 180));
 
         jButton2.setText("Eliminar");
         jButton2.setBorder(null);
-        panelRound1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 90, 30));
+        panelRound1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 90, 30));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -203,12 +206,6 @@ limpiarTabla();
     private void jLabel18MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel18MouseClicked
         // TODO add your handling code here:
 
-        Persona_Interfaz_Inicio ventanaLogin = new Persona_Interfaz_Inicio();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
-        ventanaLogin.setVisible(true);
-
-        // Cierra la ventana actual
-        this.dispose();
-        
         
         Admin_Interfaz_Inicio vuelve=new Admin_Interfaz_Inicio();
         vuelve.setVisible(true);
@@ -233,20 +230,20 @@ limpiarTabla();
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AdminUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_registro_usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AdminUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_registro_usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AdminUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_registro_usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AdminUsuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_registro_usuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdminUsuario().setVisible(true);
+                new Admin_registro_usuarios().setVisible(true);
             }
         });
     }
