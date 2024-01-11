@@ -19,7 +19,7 @@ import proyecto_final.Clases.Clase_Registrarse;
 public class Admin_registro_usuarios extends javax.swing.JFrame {
 
     private DefaultTableModel modelo;
-    public static ArrayList<Clase_Registrarse> Lista = Registro.Lista;
+   public static ArrayList<Clase_Registrarse> Lista = Registro.Lista;
 
     /**
      * Creates new form AdminUsuario
@@ -126,7 +126,7 @@ public class Admin_registro_usuarios extends javax.swing.JFrame {
         );
 
         panelRound1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 40));
-        panelRound1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 190, 30));
+        panelRound1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 190, 30));
 
         jButton1.setText("Buscar");
         jButton1.setBorder(null);
@@ -135,7 +135,7 @@ public class Admin_registro_usuarios extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        panelRound1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 90, 30));
+        panelRound1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 90, 30));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -160,11 +160,11 @@ public class Admin_registro_usuarios extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        panelRound1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 650, 360));
+        panelRound1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 650, 180));
 
         jButton2.setText("Eliminar");
         jButton2.setBorder(null);
-        panelRound1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 90, 30));
+        panelRound1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 50, 90, 30));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
