@@ -36,7 +36,6 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPasswordField1 = new javax.swing.JPasswordField();
         titulo = new javax.swing.JLabel();
         bot_usuario = new javax.swing.JButton();
         bot_frases = new javax.swing.JButton();
@@ -47,9 +46,7 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        fondo = new javax.swing.JLabel();
-
-        jPasswordField1.setText("jPasswordField1");
+        panelRound2 = new proyecto_final.PanelRound();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -112,7 +109,7 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/Logo_conCirculo-removebg-preview (2).png"))); // NOI18N
         panelRound1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 90, 330, 250));
 
-        getContentPane().add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, -1, -1));
+        getContentPane().add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 30, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/boton.png"))); // NOI18N
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -122,8 +119,9 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
         });
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(904, 0, 30, 30));
 
-        fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyecto_final/Imagenes/1003541_1.png"))); // NOI18N
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 540));
+        panelRound2.setBackground(new java.awt.Color(84, 71, 132));
+        panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 940, 520));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -174,13 +172,12 @@ public class Admin_Interfaz_Inicio extends javax.swing.JFrame {
     private javax.swing.JButton bot_frases;
     private javax.swing.JButton bot_noticias;
     private javax.swing.JButton bot_usuario;
-    private javax.swing.JLabel fondo;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator4;
     private proyecto_final.PanelRound panelRound1;
+    private proyecto_final.PanelRound panelRound2;
     private javax.swing.JLabel titulo;
     // End of variables declaration//GEN-END:variables
 }

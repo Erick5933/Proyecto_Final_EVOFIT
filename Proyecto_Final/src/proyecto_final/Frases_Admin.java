@@ -64,6 +64,8 @@ private ArrayList<frases> listaFrases = new ArrayList<>();
         botonregresar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
+        setResizable(false);
 
         panelRound1.setBackground(new java.awt.Color(84, 71, 132));
         panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -359,28 +361,53 @@ private ArrayList<frases> listaFrases = new ArrayList<>();
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtcodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodigoActionPerformed
+    private void botonregresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonregresarMouseClicked
+        Admin_Interfaz_Inicio volvi = new Admin_Interfaz_Inicio();
+        volvi.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_botonregresarMouseClicked
+
+    private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
+        dispose();
+    }//GEN-LAST:event_cerrarMouseClicked
+
+    private void btconsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btconsultarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtcodigoActionPerformed
+        // Obtener la fila seleccionada en la tabla
+        int filaSeleccionada = tabladatos.getSelectedRow();
 
-    private void btingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btingresarActionPerformed
+        if (filaSeleccionada != -1) {
+            // Mostrar los datos de la frase seleccionada en los campos de texto
+            frases fraseSeleccionada = listaFrases.get(filaSeleccionada);
+            txtcodigo.setText(fraseSeleccionada.getCod_frases());
+            txtfrase.setText(fraseSeleccionada.getTexto());
+            txtfraseautor.setText(fraseSeleccionada.getAutor());
+            txtcategoria.setText(fraseSeleccionada.getCategoria());
+        } else {
+            // Mostrar un mensaje indicando que no se ha seleccionado ninguna fila
+        }
+
+    }//GEN-LAST:event_btconsultarActionPerformed
+
+    private void bteliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bteliminarActionPerformed
         // TODO add your handling code here:
-        // Agregar una nueva frase a la lista
-        frases nuevaFrase = new frases();
-        nuevaFrase.setAutor(txtfraseautor.getText());
-        nuevaFrase.setTexto(txtfrase.getText());
-        nuevaFrase.setCod_frases(txtcodigo.getText());
-        nuevaFrase.setCategoria(txtcategoria.getText());
+        // Obtener la fila seleccionada en la tabla
+        int filaSeleccionada = tabladatos.getSelectedRow();
 
-        listaFrases.add(nuevaFrase);
+        if (filaSeleccionada != -1) {
+            // Eliminar la frase de la lista
+            listaFrases.remove(filaSeleccionada);
 
-        // Limpiar los campos después de agregar
-        limpiarCampos();
+            // Limpiar los campos después de eliminar
+            limpiarCampos();
 
-        // Actualizar la tabla
-        mostrarDatosEnTabla();
-       
-    }//GEN-LAST:event_btingresarActionPerformed
+            // Actualizar la tabla
+            mostrarDatosEnTabla();
+        } else {
+            // Mostrar un mensaje indicando que no se ha seleccionado ninguna fila
+        }
+
+    }//GEN-LAST:event_bteliminarActionPerformed
 
     private void btmodificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btmodificarActionPerformed
         // TODO add your handling code here:
@@ -403,58 +430,31 @@ private ArrayList<frases> listaFrases = new ArrayList<>();
         } else {
             // Mostrar un mensaje indicando que no se ha seleccionado ninguna fila
         }
-       
-        
+
     }//GEN-LAST:event_btmodificarActionPerformed
 
-    private void bteliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bteliminarActionPerformed
+    private void btingresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btingresarActionPerformed
         // TODO add your handling code here:
-         // Obtener la fila seleccionada en la tabla
-        int filaSeleccionada = tabladatos.getSelectedRow();
+        // Agregar una nueva frase a la lista
+        frases nuevaFrase = new frases();
+        nuevaFrase.setAutor(txtfraseautor.getText());
+        nuevaFrase.setTexto(txtfrase.getText());
+        nuevaFrase.setCod_frases(txtcodigo.getText());
+        nuevaFrase.setCategoria(txtcategoria.getText());
 
-        if (filaSeleccionada != -1) {
-            // Eliminar la frase de la lista
-            listaFrases.remove(filaSeleccionada);
+        listaFrases.add(nuevaFrase);
 
-            // Limpiar los campos después de eliminar
-            limpiarCampos();
+        // Limpiar los campos después de agregar
+        limpiarCampos();
 
-            // Actualizar la tabla
-            mostrarDatosEnTabla();
-        } else {
-            // Mostrar un mensaje indicando que no se ha seleccionado ninguna fila
-        }
-       
-    }//GEN-LAST:event_bteliminarActionPerformed
+        // Actualizar la tabla
+        mostrarDatosEnTabla();
 
-    private void btconsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btconsultarActionPerformed
+    }//GEN-LAST:event_btingresarActionPerformed
+
+    private void txtcodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcodigoActionPerformed
         // TODO add your handling code here:
-         // Obtener la fila seleccionada en la tabla
-        int filaSeleccionada = tabladatos.getSelectedRow();
-
-        if (filaSeleccionada != -1) {
-            // Mostrar los datos de la frase seleccionada en los campos de texto
-            frases fraseSeleccionada = listaFrases.get(filaSeleccionada);
-            txtcodigo.setText(fraseSeleccionada.getCod_frases());
-            txtfrase.setText(fraseSeleccionada.getTexto());
-            txtfraseautor.setText(fraseSeleccionada.getAutor());
-            txtcategoria.setText(fraseSeleccionada.getCategoria());
-        } else {
-            // Mostrar un mensaje indicando que no se ha seleccionado ninguna fila
-        }
-       
-    }//GEN-LAST:event_btconsultarActionPerformed
-
-    private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
-        dispose();
-    }//GEN-LAST:event_cerrarMouseClicked
-
-    private void botonregresarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonregresarMouseClicked
-        Admin_Interfaz_Inicio volvi = new Admin_Interfaz_Inicio();
-        volvi.setVisible(true);
-        this.dispose();
-
-    }//GEN-LAST:event_botonregresarMouseClicked
+    }//GEN-LAST:event_txtcodigoActionPerformed
 
     /**
      * @param args the command line arguments
