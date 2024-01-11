@@ -18,7 +18,7 @@ import java.util.ArrayList;
  */
 public class Registro extends javax.swing.JFrame {
     public static ArrayList<Clase_Registrarse> Lista = new ArrayList<>();
-        private AdminUsuario adminUsuario;
+        private Admin_registro_usuarios adminUsuario;
 
 
     /**

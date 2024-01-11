@@ -16,6 +16,8 @@ public class Alimentos_Usuarios extends javax.swing.JFrame {
      */
     public Alimentos_Usuarios() {
         initComponents();
+        
+        this.setLocationRelativeTo(null);
     }
 
     /**

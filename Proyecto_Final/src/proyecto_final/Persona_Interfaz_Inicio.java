@@ -657,44 +657,48 @@ public class Persona_Interfaz_Inicio extends javax.swing.JFrame {
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         // TODO add your handling code here:
-        
+
         //// ---------- Dormir 
+        Sueño_Usuario ventanaLogin = new Sueño_Usuario();  // Reemplaza con el nombre correcto de tu clase de inicio de sesión
+        ventanaLogin.setVisible(true);
+
+        // Cierra la ventana actual
+        this.dispose();
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void panelRound8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelRound8MouseClicked
         // TODO add your handling code here:
-        
+
         Alimentos_Usuarios noti = new Alimentos_Usuarios();
         noti.setVisible(true);
         this.dispose();
-        
+
     }//GEN-LAST:event_panelRound8MouseClicked
 
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
         // TODO add your handling code here:
-        
-           Calculadora noti = new Calculadora();
+
+        Calculadora noti = new Calculadora();
         noti.setVisible(true);
         this.dispose();
-        
-        
+
+
     }//GEN-LAST:event_jLabel10MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         // TODO add your handling code here:
-        
-        
-            Noticias noti = new Noticias();
+
+        Noticias noti = new Noticias();
         noti.setVisible(true);
         this.dispose();
-        
+
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-AdminUsuario newFrame = new AdminUsuario();
-             newFrame.setVisible(true);
-             this.dispose();
-             newFrame.setLocationRelativeTo(null);           
+        Ficha_Personal newFrame = new Ficha_Personal();
+        newFrame.setVisible(true);
+        this.dispose();
+        newFrame.setLocationRelativeTo(null);
     }//GEN-LAST:event_jLabel6MouseClicked
 
     /**
